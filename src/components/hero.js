@@ -3,9 +3,9 @@ import Button from './mdxComponents/button'
 import Link from './link'
 import styled from '@emotion/styled'
 
-const lightThemeHeroImg = require('./images/build-cardano-light.png')
+const lightThemeHeroImg = require('./images/Mantis-Logo-Icon-Black-Green.svg')
 
-const darkThemeHeroImg = require('./images/build-cardano-dark.png')
+const darkThemeHeroImg = require('./images/Mantis-Logo-Icon-White-Green.svg')
 
 const StyledHero = styled.div`
   margin-top: -3rem !important;
