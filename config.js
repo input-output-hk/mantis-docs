@@ -1,16 +1,16 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://cardano.org',
+    siteUrl: 'http://bbc.co.uk',
     gaTrackingId: null,
     trailingSlash: true,
   },
   header: {
-    logo: '/images/acme.svg',
+    logo: '/images/Mantis-Logo-Icon-Black-White.svg',
     logoLink: '/',
     title:
       "<h1>DOCS</h1>",
-    githubUrl: 'https://github.com/input-output-hk/docs-starter-gatsby-mdx-github',
+    githubUrl: 'https://github.com/input-output-hk/mantis-docs',
     helpUrl: '',
     tweetText: '',
     social: `<li>
@@ -52,20 +52,20 @@ const config = {
       "<a href='https://www.bbc.co.uk/news' target='_blank' rel='noopener noreferrer'>BBC </a><div class='accentCircle'></div><a href='https://edition.cnn.com/' target='_blank' rel='noopener noreferrer'>CNN</a>",
   },
   siteMetadata: {
-    title: 'Documentation Starter',
-    description: 'Documentation for X ',
+    title: 'Mantis Documentation',
+    description: 'Mantis Documentation ',
     ogImage: null,
-    docsLocation: 'https://github.com/input-output-hk/docs-starter-gatsby-mdx-github/tree/master/content',
+    docsLocation: 'https://github.com/input-output-hk/mantis-docs/tree/master/content',
     favicon: 'pwa-512.png',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Documention',
+      name: 'Mantis Documention',
       short_name: 'Docs',
       start_url: '/',
-      background_color: '#1d1e21',
-      theme_color: '#3A86FF',
+      background_color: '#000000',
+      theme_color: '#33FF99',
       display: 'standalone',
       crossOrigin: 'use-credentials',
       icons: [

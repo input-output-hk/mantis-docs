@@ -14,11 +14,11 @@ const lightTheme = {
     heading: '#000',
     text: '#3B454E',
     preFormattedText: 'rgb(245, 247, 249)',
-    link: '#3A86FF',
-    info: '#3A86FF',
-    warn: '#FFBE0B',
-    alert: '#FB5607',
-    primary: 'rgba(58,134,255,1)'
+    link: '#33FF99',
+    info: '#33FF99',
+    warn: '#FFB140',
+    alert: '#FF2E00',
+    primary: '#33FF99'
   },
 };
 
@@ -32,11 +32,11 @@ const darkTheme = {
     heading: '#fff',
     text: '#fff',
     preFormattedText: '#000',
-    link: '#8338EC',
-    info: '#8338EC',
-    warn: '#FFBE0B',
-    alert: '#FB5607',
-    primary: 'rgba(131,56,236,1)'
+    link: '#33FF99',
+    info: '#33FF99',
+    warn: '#FFB140',
+    alert: '#FF2E00',
+    primary: '#33FF99'
   },
 };
 

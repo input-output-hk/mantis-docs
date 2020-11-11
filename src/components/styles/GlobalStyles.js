@@ -1,7 +1,7 @@
 import { injectGlobal } from 'emotion';
 
 export const baseStyles = injectGlobal`
-  @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -23,21 +23,11 @@ export const baseStyles = injectGlobal`
   }
   html,
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Chivo', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
-    font-size: 16px;
-    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
   }
-
   a {
     transition: color 0.15s;
     /* color: #663399; */
-  }
-
-  body {
-    font-family: 'Chivo';
   }
   .visibleMobile {
     display: none;
@@ -80,7 +70,7 @@ export const baseStyles = injectGlobal`
     border-radius: 1px;
     margin: 0 auto;
     margin-top: 4px;
-    background-color: rgba(0, 51, 173, 1);
+    background-color: #33ff99;
   }
   .navBarToggle .iconBar:first-child {
     margin-top: 0px;
@@ -158,11 +148,11 @@ export const baseStyles = injectGlobal`
     border: none;
   }
   .formElement svg path {
-    fill: rgba(255, 85, 83, 1);
+    fill: #33ff99;
   }
   .searchInput {
     width: 100%;
-    background-color: rgba(28,211,198,.12) !important;
+    background-color: rgba(51,255,153,.12) !important;
     border-width: 0 !important;
     color: #C2C2C2;
     padding: 10px;
@@ -247,7 +237,6 @@ export const baseStyles = injectGlobal`
   }
 
   .logoContent {
-    font-family: 'Chivo';
     margin-left: 16px;
     font-size: 28px;
     line-height: 1.5;
@@ -299,7 +288,6 @@ export const baseStyles = injectGlobal`
     -webkit-overflow-scrolling: touch;
   }
   .navBarUL li a {
-    font-family: 'Chivo';
     color: #fff !important;
     font-size: 16px;
     font-weight: 500;
@@ -379,10 +367,9 @@ export const baseStyles = injectGlobal`
     /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
     background-color: #f8f8f8;
     padding: 18px 16px;
-    font-family: 'Chivo';
     font-size: 18px;
     font-weight: 600;
-    color: rgba(0, 51, 173, 1);
+    color: #33ff99;
     display: flex;
     align-items: center;
   }
@@ -392,19 +379,18 @@ export const baseStyles = injectGlobal`
   }
 
   .sidebarTitle a {
-    color: rgba(0, 51, 173, 1);
+    color: #33ff99;
   }
 
   .accentCircle {
     width: 8px;
     height: 8px;
-    background-color: rgba(255, 85, 83, 1);
+    background-color: #33ff99;
     border-radius: 50%;
     margin: 0 12px;
   }
 
   .headerNav {
-    font-family: 'Chivo';
     padding: 0px 24px;
     color: #001933;
     font-size: 16px;
@@ -458,7 +444,7 @@ export const baseStyles = injectGlobal`
   }
 
   .showFrontLine .active > a {
-    background-color: rgba(82, 129, 247, 1);
+    background-color: ${props => props.theme.colors.primary};
     color: #fff !important;
   }
   .firstLevel ul li .collapser svg path {
@@ -513,7 +499,7 @@ export const baseStyles = injectGlobal`
     border-color: rgb(230, 236, 241) !important;
     border-style: none none none solid;
     border-width: 1px 0px 1px 1px;
-    background-color: rgba(82, 129, 247, 1) !important;
+    background-color: ${props => props.theme.colors.primary} !important;
     color: #fff;
   }
 

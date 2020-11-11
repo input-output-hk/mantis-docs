@@ -47,14 +47,14 @@ const NavBarWrapper = styled('div')`
     }
   }
   .navBarBrand img {
-    width:200px;
+    width:60px;
   }
   .navBarDefault {
     &.light-header {
-      background: rgba(58,134,255,1);
+      background: #33FF99;
     }
     &.dark-header {
-      background: rgba(131,56,236,1);
+      background: #33FF99;
     }
   }
 `

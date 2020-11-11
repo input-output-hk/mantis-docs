@@ -66,7 +66,7 @@ const Wrapper = styled('div')`
   }
 
   .sideBarUL .item > a:hover {
-    background-color: rgba(82, 129, 247, 1);
+    background-color: ${({theme}) => theme.colors.primary};
     color: #fff !important;
 
     /* background: #F8F8F8 */
