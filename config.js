@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'http://bbc.co.uk',
+    siteUrl: 'https://mantis-docs-staging.netlify.app/',
     gaTrackingId: null,
     trailingSlash: true,
   },
