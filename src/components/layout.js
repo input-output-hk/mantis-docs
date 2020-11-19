@@ -61,13 +61,12 @@ const Wrapper = styled('div')`
   }
 
   .showFrontLine .active > a {
-    color: #fff !important;
+    color: ${({ theme }) => theme.colors.text};
     background-color: ${({theme}) => theme.colors.primary};
   }
 
   .sideBarUL .item > a:hover {
     background-color: ${({theme}) => theme.colors.primary};
-    color: #fff !important;
 
     /* background: #F8F8F8 */
   }
@@ -117,11 +116,6 @@ const Layout = ({ children, location, useFwTemplate }) => (
     <MDXProvider components={mdxComponents}>
       <SiteWrap>
         <Wrapper>
-          {useFwTemplate
-            ? <Content>
-                <MaxWidth>{children}</MaxWidth>
-              </Content>
-            : <>
                 <LeftSideBarWidth className={'hiddenMobile'}>
                   <Sidebar location={location} />
                 </LeftSideBarWidth>
@@ -139,8 +133,6 @@ const Layout = ({ children, location, useFwTemplate }) => (
                     <RightSidebar location={location} />
                   }
                 </RightSideBarWidth>
-              </>
-            }
         </Wrapper>
         <Footer variant='cardano' />
       </SiteWrap>

@@ -6,10 +6,9 @@ const config = {
     trailingSlash: true,
   },
   header: {
-    logo: '/images/Mantis-Logo-Icon-Black-White.svg',
+    logo: '/images/mantis-logo-docs.svg',
     logoLink: '/',
-    title:
-      "<h1>DOCS</h1>",
+    title: "",
     githubUrl: 'https://github.com/input-output-hk/mantis-docs',
     helpUrl: '',
     tweetText: '',
@@ -27,10 +26,9 @@ const config = {
 		      </div>
 		    </a>
 		  </li>`,
-    links: [{ text: 'Foo', link: '/' }],
     search: {
       enabled: true,
-      indexName: 'test_cardano-docs',
+      indexName: 'test_mantis-docs',
       algoliaAppId: process.env.GATSBY_ALGOLIA_APP_ID,
       algoliaSearchKey: process.env.GATSBY_ALGOLIA_SEARCH_KEY,
       algoliaAdminKey: process.env.ALGOLIA_ADMIN_KEY,
@@ -38,18 +36,18 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
-      '/01-introduction/', // add trailing slash if enabled above
+      '/01-quickstart/', // add trailing slash if enabled above
       // '/02-getting-started/'
     ],
     collapsedNav: [ // add headings here if to be collapsed by default
       // '/02-getting-started/', // add trailing slash if enabled above
       '/getting-started/installing',
     ],
-    links: [{ text: 'Helpful link', link: 'https://www.wikipedia.org/' }],
+    links: [{  }],
     frontLine: true, // This toggles collapse arrows
     ignoreIndex: true,
     title:
-      "<a href='https://www.bbc.co.uk/news' target='_blank' rel='noopener noreferrer'>BBC </a><div class='accentCircle'></div><a href='https://edition.cnn.com/' target='_blank' rel='noopener noreferrer'>CNN</a>",
+      "<a href='/'>Documentation</a>",
   },
   siteMetadata: {
     title: 'Mantis Documentation',
@@ -65,7 +63,7 @@ const config = {
       short_name: 'Docs',
       start_url: '/',
       background_color: '#000000',
-      theme_color: '#33FF99',
+      theme_color: '#33ff99',
       display: 'standalone',
       crossOrigin: 'use-credentials',
       icons: [

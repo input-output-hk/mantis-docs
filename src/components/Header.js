@@ -47,11 +47,12 @@ const NavBarWrapper = styled('div')`
     }
   }
   .navBarBrand img {
-    width:60px;
+    width:253px;
+    height: 43px;
   }
   .navBarDefault {
     &.light-header {
-      background: #33FF99;
+      background: #f8f8f8;
     }
     &.dark-header {
       background: #33FF99;
@@ -85,10 +86,6 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
             logo {
               link
               image
-            }
-            headerLinks {
-              link
-              text
             }
           }
         }
@@ -142,21 +139,6 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                 <hr />
               </div>
               <ul className={'navBarUL navBarNav navBarULRight'}>
-                {headerLinks.map((link, key) => {
-                  if (link.link !== '' && link.text !== '') {
-                    return (
-                      <li key={key}>
-                        <a
-                          className="sidebarLink"
-                          href={link.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          dangerouslySetInnerHTML={{ __html: link.text }}
-                        />
-                      </li>
-                    );
-                  }
-                })}
                 {helpUrl !== '' ? (
                   <li>
                     <a href={helpUrl}>

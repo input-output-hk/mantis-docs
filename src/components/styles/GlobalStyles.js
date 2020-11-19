@@ -1,7 +1,7 @@
 import { injectGlobal } from 'emotion';
 
 export const baseStyles = injectGlobal`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;600;0,900;1,700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -365,21 +365,20 @@ export const baseStyles = injectGlobal`
   /* Header section ends here */
   .sidebarTitle {
     /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
-    background-color: #f8f8f8;
-    padding: 18px 16px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #33ff99;
+    color: inherit;
+    padding: 18px 30px;
+    font-size: 14px;
+    font-weight: normal;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
+    a{
+      color: inherit;
+    }
   }
 
   .sideBarShow {
     display: none;
-  }
-
-  .sidebarTitle a {
-    color: #33ff99;
   }
 
   .accentCircle {
@@ -412,7 +411,6 @@ export const baseStyles = injectGlobal`
   }
 
   .sideBarUL {
-    margin-top: 32px;
   }
 
   .sideBarUL li {
@@ -443,9 +441,13 @@ export const baseStyles = injectGlobal`
     cursor: pointer;
   }
 
+  .showFrontLine > .active {
+    background: #000;
+  }
+
   .showFrontLine .active > a {
     background-color: ${props => props.theme.colors.primary};
-    color: #fff !important;
+    color: ${props => props.theme.colors.primary} !important;
   }
   .firstLevel ul li .collapser svg path {
     fill: #dcdcdc !important;
@@ -478,7 +480,6 @@ export const baseStyles = injectGlobal`
   }
 
   .sideBarUL .item .item {
-    margin-left: 16px;
   }
 
   .firstLevel > ul > .item {
@@ -486,7 +487,7 @@ export const baseStyles = injectGlobal`
   }
 
   .firstLevel ul .item a {
-    padding-left: 15px !important;
+    padding-left: 30px !important;
   }
 
   .showFrontLine .item .item {
@@ -500,7 +501,7 @@ export const baseStyles = injectGlobal`
     border-style: none none none solid;
     border-width: 1px 0px 1px 1px;
     background-color: ${props => props.theme.colors.primary} !important;
-    color: #fff;
+    color: ${props => props.theme.colors.text};
   }
 
   .sectionHeading, a.sectionHeading {
@@ -666,15 +667,15 @@ export const baseStyles = injectGlobal`
 
   .heading1 {
     font-size: 26px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.5;
     margin-bottom: 16px;
     margin-top: 32px;
   }
 
   .heading2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
     line-height: 1.5;
     margin-bottom: 16px;
     margin-top: 32px;
