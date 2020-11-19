@@ -114,7 +114,6 @@ const SidebarLayout = ({ location }) => (
           ) : null}
           <ul className={'sideBarUL'}>
             <Tree edges={allMdx.edges} />
-            {config.sidebar.links && config.sidebar.links.length > 0 && <Divider />}
           </ul>
         </Sidebar>
       );

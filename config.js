@@ -41,7 +41,11 @@ const config = {
     ],
     collapsedNav: [ // add headings here if to be collapsed by default
       // '/02-getting-started/', // add trailing slash if enabled above
-      '/getting-started/installing',
+      '/install',
+      '/learn',
+      '/clients',
+      '/creating-a-private-network',
+      '/reference',
     ],
     links: [{  }],
     frontLine: true, // This toggles collapse arrows

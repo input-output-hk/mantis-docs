@@ -62,12 +62,36 @@ const Wrapper = styled('div')`
 
   .showFrontLine .active > a {
     color: ${({ theme }) => theme.colors.text};
-    background-color: ${({theme}) => theme.colors.primary};
+    position: relative;
+    z-index: 1;
+  }
+
+  .showFrontLine .active a {
+    font-weight: 900;
   }
 
   .sideBarUL .item > a:hover {
-    background-color: ${({theme}) => theme.colors.primary};
-
+    color: ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.background};
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: ${({theme}) => theme.colors.primary};
+      -webkit-transform-origin: 100% 10%;
+      -ms-transform-origin: 100% 10%;
+      transform-origin: 100% 10%;
+      -webkit-transform: skew(23deg);
+      -ms-transform: skew(23deg);
+      transform: skew(23deg);
+      z-index: -1;
+    }
     /* background: #F8F8F8 */
   }
 
