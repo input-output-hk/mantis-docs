@@ -53,6 +53,8 @@ const NavBarWrapper = styled('div')`
   .navBarDefault {
     &.light-header {
       background: #f8f8f8;
+      background-image: url('../../images/header-1-01.png');
+      background-size: cover;
     }
     &.dark-header {
       background: #33FF99;
