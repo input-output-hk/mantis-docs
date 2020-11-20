@@ -1,7 +1,7 @@
 import { injectGlobal } from 'emotion';
 
 export const baseStyles = injectGlobal`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;600;0,900;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;600;700;0,900;1,700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -334,18 +334,13 @@ export const baseStyles = injectGlobal`
     max-width:45rem;
     margin: 0 auto;
   }
-  .discordBtn, .twitterBtn {
+  .btn {
     border-radius: 4px;
-    border: solid 1px #d1d2d3;
-    background-color: #f1f5f8;
-    width: 20px;
-    height: 20px;
     padding-top: 2px;
-    margin-left: 8px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .8;
     cursor: pointer;
   }
   .twitterBtn img {
@@ -354,8 +349,8 @@ export const baseStyles = injectGlobal`
   .discordBtn img {
     width: 10px !important;
   }
-  .discordBtn:hover, .twitterBtn:hover {
-    opacity: 1;
+  .btn:hover {
+    opacity: 0.8;
   }
   .discordBtn {
     img {
@@ -439,6 +434,10 @@ export const baseStyles = injectGlobal`
     right: 20px;
     z-index: 1;
     cursor: pointer;
+  }
+
+  a.doc-title {
+    color: currentcolor;
   }
 
   .showFrontLine > .active {

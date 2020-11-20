@@ -17,9 +17,9 @@ export const Sidebar = styled('aside')`
   background: ${props => props.theme.colors.background};
 
   .rightSideTitle {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     padding: 7px 24px 7px 16px;

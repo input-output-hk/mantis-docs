@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 import GitHubButton from 'react-github-btn';
+import { Github } from '@styled-icons/boxicons-logos/Github'
 import Link from './link';
 import Loadable from 'react-loadable';
 
@@ -168,18 +169,19 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                     <ul
                       className="socialWrapper"
                       dangerouslySetInnerHTML={{ __html: config.header.social }}
-                    ></ul>
+                    >
+                    </ul>
                   </li>
                 ) : null}
                 {githubUrl !== '' ? (
-                  <li className={'githubBtn'}>
-                    <GitHubButton
+                  <li className='btn'>
+                    <Github
+                      size="24"
                       href={githubUrl}
                       data-show-count="true"
                       aria-label="Star on GitHub"
                     >
-                      Star
-                    </GitHubButton>
+                    </Github>
                   </li>
                 ) : null}
                 <li>

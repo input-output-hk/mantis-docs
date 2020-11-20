@@ -7,25 +7,25 @@ const config = {
   },
   header: {
     logo: '/images/mantis-logo-docs.svg',
-    logoLink: '/',
+    logoLink: '/getting-started',
     title: "",
     githubUrl: 'https://github.com/input-output-hk/mantis-docs',
     helpUrl: '',
     tweetText: '',
     social: `<li>
 		    <a href="https://twitter.com/cardano" target="_blank" rel="noopener noreferrer">
-		      <div class="twitterBtn">
-		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt={'Twitter'}/>
+		      <div class="btn">
+		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt='Twitter'/>
 		      </div>
 		    </a>
 		  </li>
 			<li>
 		    <a href="https://discord.gg/UjUP8nz" target="_blank" rel="noopener noreferrer">
-		      <div class="discordBtn">
-		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt={'Discord'}/>
+		      <div class="btn">
+		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt='Discord'/>
 		      </div>
 		    </a>
-		  </li>`,
+      </li>`,
     search: {
       enabled: true,
       indexName: 'test_mantis-docs',
@@ -51,7 +51,7 @@ const config = {
     frontLine: true, // This toggles collapse arrows
     ignoreIndex: true,
     title:
-      "<a href='/'>Documentation</a>",
+      "<a class='doc-title' href='/getting-started'>Documentation</a>",
   },
   siteMetadata: {
     title: 'Mantis Documentation',

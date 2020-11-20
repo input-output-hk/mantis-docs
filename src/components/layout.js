@@ -56,7 +56,7 @@ const Wrapper = styled('div')`
   justify-content: space-between;
   background: ${({ theme }) => theme.colors.background};
 
-  .sideBarUL li a, .sectionHeading {
+  .sideBarUL li a, .sectionHeading, .doc-title {
     color: ${({ theme }) => theme.colors.text};
   }
 
