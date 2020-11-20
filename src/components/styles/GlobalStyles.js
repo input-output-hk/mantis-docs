@@ -288,7 +288,7 @@ export const baseStyles = injectGlobal`
     -webkit-overflow-scrolling: touch;
   }
   .navBarUL li a {
-    color: #fff !important;
+    color: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: 1em;
@@ -501,9 +501,7 @@ export const baseStyles = injectGlobal`
   }
 
   .showFrontLine .item .active > a {
-    border-color: rgb(230, 236, 241) !important;
-    border-style: none none none solid;
-    border-width: 1px 0px 1px 1px;
+    border:none;
     background-color: ${props => props.theme.colors.primary} !important;
     color: ${props => props.theme.colors.text};
     position: relative;
@@ -756,6 +754,7 @@ export const baseStyles = injectGlobal`
   }
   .topnav {
     -webkit-transition: top 0.5s, bottom 0.5s;
+    margin-left: auto;
   }
 
   @media (max-width: 767px) {
@@ -816,6 +815,7 @@ export const baseStyles = injectGlobal`
     }
     .navBarULRight {
       position: static;
+      justify-content: flex-end;
     }
     .navBarUL {
       display: flex;

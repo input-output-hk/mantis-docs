@@ -60,7 +60,8 @@ const NavBarWrapper = styled('div')`
       background-size: cover;
     }
     &.dark-header {
-      background: #33FF99;
+      background-image: url('../../images/header-dark.png');
+      background-size: cover;
     }
   }
 `
@@ -146,32 +147,34 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                   </li>
                 ) : null}
                   <li className='btn'>
-                    <Twitter
-                      size="24"
-                      href="https://twitter.com"
-                      data-show-count="true"
-                      aria-label="Twitter"
-                    >
-                    </Twitter>
+                    <a href="https://twitter.com" title="Twitter" rel="noopener noreferrer" target="_blank">
+                      <Twitter
+                        size="24"
+                        data-show-count="true"
+                        aria-label="Twitter"
+                      >
+                      </Twitter>
+                    </a>
                   </li>
                   <li className='btn'>
-                    <Discord
-                      size="24"
-                      href="https://discord.com"
-                      data-show-count="true"
-                      aria-label="Discord"
-                    >
-                    </Discord>
+                    <a href="https://discord.com" title="Discord" rel="noopener noreferrer" target="_blank">
+                      <Discord
+                        size="24"
+                        data-show-count="true"
+                        aria-label="Discord"
+                      >
+                      </Discord>
+                    </a>
                   </li>
                 {githubUrl !== '' ? (
                   <li className='btn'>
-                    <Github
-                      size="24"
-                      href={githubUrl}
-                      data-show-count="true"
-                      aria-label="Star on GitHub"
-                    >
-                    </Github>
+                    <a href={githubUrl} title="GitHub" rel="noopener noreferrer" target="_blank">
+                      <Github
+                        size="24"
+                        aria-label="GitHub"
+                      >
+                      </Github>
+                    </a>
                   </li>
                 ) : null}
                 <li>

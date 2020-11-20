@@ -26,8 +26,9 @@ const config = {
 		      </div>
 		    </a>
       </li>`,
+    links: [{ text: '', link: '' }],
     search: {
-      enabled: true,
+      enabled: false,
       indexName: 'test_mantis-docs',
       algoliaAppId: process.env.GATSBY_ALGOLIA_APP_ID,
       algoliaSearchKey: process.env.GATSBY_ALGOLIA_SEARCH_KEY,

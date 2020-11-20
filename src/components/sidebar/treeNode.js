@@ -58,7 +58,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
             </div>
         : 
         title && 
-          <Link to={url}>
+          <Link activeClassName="active" to={url}>
             {title}
             {!config.sidebar.frontLine && title && hasChildren ? (
               <button onClick={collapse} aria-label="collapse" className="collapser">
