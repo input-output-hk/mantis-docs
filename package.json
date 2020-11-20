@@ -21,6 +21,7 @@
     "emotion": "^10.0.23",
     "emotion-server": "^10.0.17",
     "emotion-theming": "^10.0.19",
+    "fontsource-montserrat": "^3.0.9",
     "gatsby": "^2.24.58",
     "gatsby-image": "^2.4.17",
     "gatsby-link": "^2.2.27",

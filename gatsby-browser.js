@@ -1,3 +1,4 @@
+import "fontsource-montserrat"
 export const onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(
     `This tutorial has been updated. ` +
