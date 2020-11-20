@@ -6,7 +6,7 @@ const config = {
     trailingSlash: true,
   },
   header: {
-    logo: '/images/mantis-logo-docs.svg',
+    logo: '/images/mantis-docs-logo.svg',
     logoLink: '/getting-started',
     title: "",
     githubUrl: 'https://github.com/input-output-hk/mantis-docs',

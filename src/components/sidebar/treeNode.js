@@ -29,6 +29,10 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
     borderTop = true
   }
 
+  if ((!location && url === "/getting-started") || (!location && url === "/getting-started/")) {
+    active = true
+  }
+
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
 
   return (
