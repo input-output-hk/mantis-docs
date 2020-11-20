@@ -36,7 +36,7 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
-      '/01-quickstart/', // add trailing slash if enabled above
+      '/00-getting-started/', // add trailing slash if enabled above
       // '/02-getting-started/'
     ],
     collapsedNav: [ // add headings here if to be collapsed by default
