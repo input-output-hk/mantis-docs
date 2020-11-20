@@ -20,6 +20,9 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
   if (typeof document != 'undefined') {
     location = document.location;
   }
+  else {
+
+  }
   let active =
     location && (location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
 
@@ -28,6 +31,8 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
   if (title === "Install" || title === "Creating a Private Network" || title === "Reference") {
     borderTop = true
   }
+
+
 
   if ((!location && url === "/getting-started") || (!location && url === "/getting-started/")) {
     active = true
@@ -40,8 +45,8 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
       {hasChildren 
         ? title && 
           <div>
-            {borderTop ? <hr /> : ''}
-            <a className='sectionHeading' onClick={collapse} >
+            {borderTop ? <hr className="accent"/> : ''}
+            <a activeClassName="active" className='sectionHeading' onClick={collapse} >
               {title}
               {config.sidebar.frontLine && title && hasChildren ? (
                 <button onClick={collapse} aria-label="collapse" className="collapser">
@@ -49,7 +54,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
                 </button>
               ) : null}
               </a>
-              {isCollapsed ? <hr  className="hide" /> : ''}
+              {isCollapsed ? <hr  className="hide accent" /> : ''}
             </div>
         : 
         title && 
@@ -75,7 +80,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
               />
             ))}
           </ul>
-          {!isCollapsed ? <hr  className="" /> : ''}
+          {!isCollapsed ? <hr  className="accent" /> : ''}
         </div>
       ) : null}
     </li>

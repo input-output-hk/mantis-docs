@@ -338,7 +338,7 @@ export const baseStyles = injectGlobal`
     border-radius: 4px;
     padding-top: 2px;
     margin-left: 15px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -424,6 +424,14 @@ export const baseStyles = injectGlobal`
     border-style: none none none solid;
     border-width: 1px 0px 1px 1px;
     border-color: transparent currentcolor transparent transparent;
+  }
+
+  .sideBarUL li a {
+    color: currentcolor
+  }
+
+  .sideBarUL li a:hover {
+    color: currentcolor;
   }
 
   .collapser {
@@ -789,7 +797,8 @@ export const baseStyles = injectGlobal`
     }
     .topnav.responsive .navBarUL {
       display: block;
-      text-align: left;
+      text-align: center;
+      padding-top: 0.5rem;
     }
     .hiddenMobile {
       display: none !important;
@@ -923,5 +932,10 @@ export const baseStyles = injectGlobal`
   button.sectionHeading {
     cursor:default;
     background:none;
+  }
+  .accent {
+    background-color: rgb(230,236,241);
+    height: 1px;
+    border-top: none;
   }
 `;

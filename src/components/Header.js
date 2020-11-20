@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 import GitHubButton from 'react-github-btn';
 import { Github } from '@styled-icons/boxicons-logos/Github'
+import { Twitter } from '@styled-icons/boxicons-logos/Twitter'
+import { Discord } from '@styled-icons/boxicons-logos/Discord'
 import Link from './link';
 import Loadable from 'react-loadable';
 
@@ -125,12 +127,6 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
               </Link>
               <div dangerouslySetInnerHTML={{ __html: headerTitle }} />
             </div>
-            {config.header.social ? (
-              <ul
-                className="socialWrapper visibleMobileView"
-                dangerouslySetInnerHTML={{ __html: config.header.social }}
-              ></ul>
-            ) : null}
             {isSearchEnabled ? (
               <div className={'searchWrapper hiddenMobile navBarUL'}>
                 <LoadableComponent collapse={true} indices={searchIndices} />
@@ -149,30 +145,24 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                     </a>
                   </li>
                 ) : null}
-
-                {tweetText !== '' ? (
-                  <li>
-                    <a
-                      href={'https://twitter.com/intent/tweet?&text=' + tweetText}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <li className='btn'>
+                    <Twitter
+                      size="24"
+                      href="https://twitter.com"
+                      data-show-count="true"
+                      aria-label="Twitter"
                     >
-                      <img className={'shareIcon'} src={twitter} alt={'Twitter'} />
-                    </a>
+                    </Twitter>
                   </li>
-                ) : null}
-                {tweetText !== '' || githubUrl !== '' ? (
-                  <li className="divider hiddenMobile"></li>
-                ) : null}
-                {config.header.social ? (
-                  <li className={'hiddenMobile'}>
-                    <ul
-                      className="socialWrapper"
-                      dangerouslySetInnerHTML={{ __html: config.header.social }}
+                  <li className='btn'>
+                    <Discord
+                      size="24"
+                      href="https://discord.com"
+                      data-show-count="true"
+                      aria-label="Discord"
                     >
-                    </ul>
+                    </Discord>
                   </li>
-                ) : null}
                 {githubUrl !== '' ? (
                   <li className='btn'>
                     <Github
