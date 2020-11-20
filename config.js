@@ -51,7 +51,7 @@ const config = {
     frontLine: true, // This toggles collapse arrows
     ignoreIndex: true,
     title:
-      "<a class='doc-title' href='/getting-started'>Documentation</a>",
+      "<span class='doc-title'>Documentation</span>",
   },
   siteMetadata: {
     title: 'Mantis Documentation',

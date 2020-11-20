@@ -20,7 +20,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
   if (typeof document != 'undefined') {
     location = document.location;
   }
-  const active =
+  let active =
     location && (location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
 
   let borderTop
@@ -29,7 +29,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
     borderTop = true
   }
 
-  if (url === "getting-started") {
+  if (location && location.pathaname === "/getting-started" || location.pathaname === "/getting-started/") {
     active = true
   }
 
