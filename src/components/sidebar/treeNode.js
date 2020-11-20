@@ -29,7 +29,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
     borderTop = true
   }
 
-  if (location.pathname === "getting-started") {
+  if (url === "getting-started") {
     active = true
   }
 
