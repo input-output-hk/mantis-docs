@@ -4,4 +4,5 @@
 [[redirects]]
   from = "/"
   to = "/getting-started"
+  force = true
   status = 302
