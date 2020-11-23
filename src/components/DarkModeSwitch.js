@@ -10,6 +10,11 @@ const StyledSwitch = styled('div')`
   width: 100%;
   padding: 0 20px 0 25px;
 
+  @media(max-width: 768px){
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
   /* The switch - the box around the slider */
   .switch {
     position: relative;

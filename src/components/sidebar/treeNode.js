@@ -20,8 +20,23 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
   if (typeof document != 'undefined') {
     location = document.location;
   }
-  const active =
+  else {
+
+  }
+  let active =
     location && (location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
+
+  let borderTop
+
+  if (title === "Install" || title === "Creating a Private Network" || title === "Reference") {
+    borderTop = true
+  }
+
+
+
+  if ((!location && url === "/getting-started") || (!location && url === "/getting-started/")) {
+    active = true
+  }
 
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
 
@@ -29,17 +44,21 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
     <li className={calculatedClassName}>
       {hasChildren 
         ? title && 
-          <a className='sectionHeading' onClick={collapse} >
-            {title}
-            {config.sidebar.frontLine && title && hasChildren ? (
-              <button onClick={collapse} aria-label="collapse" className="collapser">
-                {!isCollapsed ? <OpenedSvg /> : <ClosedSvg />}
-              </button>
-            ) : null}
-            </a>
+          <div>
+            {borderTop ? <hr className="accent"/> : ''}
+            <a activeClassName="active" className='sectionHeading' onClick={collapse} >
+              {title}
+              {config.sidebar.frontLine && title && hasChildren ? (
+                <button onClick={collapse} aria-label="collapse" className="collapser">
+                  {!isCollapsed ? <OpenedSvg /> : <ClosedSvg />}
+                </button>
+              ) : null}
+              </a>
+              {isCollapsed ? <hr  className="hide accent" /> : ''}
+            </div>
         : 
         title && 
-          <Link to={url}>
+          <Link activeClassName="active" to={url}>
             {title}
             {!config.sidebar.frontLine && title && hasChildren ? (
               <button onClick={collapse} aria-label="collapse" className="collapser">
@@ -50,16 +69,19 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
       }
 
       {!isCollapsed && hasChildren ? (
-        <ul>
-          {items.map((item, index) => (
-            <TreeNode
-              key={item.url + index.toString()}
-              setCollapsed={setCollapsed}
-              collapsed={collapsed}
-              {...item}
-            />
-          ))}
-        </ul>
+        <div>
+          <ul>
+            {items.map((item, index) => (
+              <TreeNode
+                key={item.url + index.toString()}
+                setCollapsed={setCollapsed}
+                collapsed={collapsed}
+                {...item}
+              />
+            ))}
+          </ul>
+          {!isCollapsed ? <hr  className="accent" /> : ''}
+        </div>
       ) : null}
     </li>
   );

@@ -18,7 +18,7 @@ const lightTheme = {
     info: '#33FF99',
     warn: '#FFB140',
     alert: '#FF2E00',
-    primary: '#33FF99'
+    primary: '#d8ffea'
   },
 };
 

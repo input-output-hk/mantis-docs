@@ -1,15 +1,31 @@
 import styled from '@emotion/styled';
 
 export const StyledHeading = styled('h1')`
-  font-size: 32px;
-  line-height: 1.5;
-  font-weight: 500;
-  border-left: 2px solid #33ff99;
+  font-size: 34px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: normal;
   padding: 0 16px;
   flex: 1;
   margin-top: 0;
+  margin-bottom: 0.5rem;
   padding-top: 0;
+  position: relative;
+  z-index: 1;
   color: ${props => props.theme.colors.heading};
+  &:before {
+    content: "";
+    width: 36px;
+    height: 87px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='87' viewBox='0 0 36 87'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233F9' fill-rule='nonzero'%3E%3Cpath d='M462 156.171L487.997 219 498 194.829 472.001 132z' transform='translate(-462 -132)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+    top: -0.65rem;
+    left: -0.1rem;
+  }
 `;
 
 export const Edit = styled('div')`

@@ -56,19 +56,42 @@ const Wrapper = styled('div')`
   justify-content: space-between;
   background: ${({ theme }) => theme.colors.background};
 
-  .sideBarUL li a, .sectionHeading {
+  .sideBarUL li a, .sectionHeading, .doc-title {
     color: ${({ theme }) => theme.colors.text};
   }
 
   .showFrontLine .active > a {
-    color: #fff !important;
-    background-color: ${({theme}) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.text};
+    position: relative;
+    z-index: 1;
+  }
+
+  .showFrontLine .active a {
+    font-weight: 900;
   }
 
   .sideBarUL .item > a:hover {
-    background-color: ${({theme}) => theme.colors.primary};
-    color: #fff !important;
-
+    color: ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.background};
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: ${({theme}) => theme.colors.primary};
+      -webkit-transform-origin: 100% 10%;
+      -ms-transform-origin: 100% 10%;
+      transform-origin: 100% 10%;
+      -webkit-transform: skew(23deg);
+      -ms-transform: skew(23deg);
+      transform: skew(23deg);
+      z-index: -1;
+    }
     /* background: #F8F8F8 */
   }
 
@@ -117,11 +140,6 @@ const Layout = ({ children, location, useFwTemplate }) => (
     <MDXProvider components={mdxComponents}>
       <SiteWrap>
         <Wrapper>
-          {useFwTemplate
-            ? <Content>
-                <MaxWidth>{children}</MaxWidth>
-              </Content>
-            : <>
                 <LeftSideBarWidth className={'hiddenMobile'}>
                   <Sidebar location={location} />
                 </LeftSideBarWidth>
@@ -139,8 +157,6 @@ const Layout = ({ children, location, useFwTemplate }) => (
                     <RightSidebar location={location} />
                   }
                 </RightSideBarWidth>
-              </>
-            }
         </Wrapper>
         <Footer variant='cardano' />
       </SiteWrap>

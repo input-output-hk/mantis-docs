@@ -96,7 +96,7 @@ export const StyledNextPrevious = styled('div')`
   .nextPreviousTitle span {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   @media (max-width: 767px) {

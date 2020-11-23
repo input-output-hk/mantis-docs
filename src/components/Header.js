@@ -2,6 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 import GitHubButton from 'react-github-btn';
+import { Github } from '@styled-icons/boxicons-logos/Github'
+import { Twitter } from '@styled-icons/boxicons-logos/Twitter'
+import { Discord } from '@styled-icons/boxicons-logos/Discord'
 import Link from './link';
 import Loadable from 'react-loadable';
 
@@ -47,14 +50,18 @@ const NavBarWrapper = styled('div')`
     }
   }
   .navBarBrand img {
-    width:60px;
+    width:253px;
+    height: 43px;
   }
   .navBarDefault {
     &.light-header {
-      background: #33FF99;
+      background: #f8f8f8;
+      background-image: url('../../images/header-1-01.png');
+      background-size: cover;
     }
     &.dark-header {
-      background: #33FF99;
+      background-image: url('../../images/header-dark.png');
+      background-size: cover;
     }
   }
 `
@@ -85,10 +92,6 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
             logo {
               link
               image
-            }
-            headerLinks {
-              link
-              text
             }
           }
         }
@@ -125,12 +128,6 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
               </Link>
               <div dangerouslySetInnerHTML={{ __html: headerTitle }} />
             </div>
-            {config.header.social ? (
-              <ul
-                className="socialWrapper visibleMobileView"
-                dangerouslySetInnerHTML={{ __html: config.header.social }}
-              ></ul>
-            ) : null}
             {isSearchEnabled ? (
               <div className={'searchWrapper hiddenMobile navBarUL'}>
                 <LoadableComponent collapse={true} indices={searchIndices} />
@@ -142,21 +139,6 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                 <hr />
               </div>
               <ul className={'navBarUL navBarNav navBarULRight'}>
-                {headerLinks.map((link, key) => {
-                  if (link.link !== '' && link.text !== '') {
-                    return (
-                      <li key={key}>
-                        <a
-                          className="sidebarLink"
-                          href={link.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          dangerouslySetInnerHTML={{ __html: link.text }}
-                        />
-                      </li>
-                    );
-                  }
-                })}
                 {helpUrl !== '' ? (
                   <li>
                     <a href={helpUrl}>
@@ -164,38 +146,35 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                     </a>
                   </li>
                 ) : null}
-
-                {tweetText !== '' ? (
-                  <li>
-                    <a
-                      href={'https://twitter.com/intent/tweet?&text=' + tweetText}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img className={'shareIcon'} src={twitter} alt={'Twitter'} />
+                  <li className='btn'>
+                    <a href="https://twitter.com" title="Twitter" rel="noopener noreferrer" target="_blank">
+                      <Twitter
+                        size="24"
+                        data-show-count="true"
+                        aria-label="Twitter"
+                      >
+                      </Twitter>
                     </a>
                   </li>
-                ) : null}
-                {tweetText !== '' || githubUrl !== '' ? (
-                  <li className="divider hiddenMobile"></li>
-                ) : null}
-                {config.header.social ? (
-                  <li className={'hiddenMobile'}>
-                    <ul
-                      className="socialWrapper"
-                      dangerouslySetInnerHTML={{ __html: config.header.social }}
-                    ></ul>
+                  <li className='btn'>
+                    <a href="https://discord.com" title="Discord" rel="noopener noreferrer" target="_blank">
+                      <Discord
+                        size="24"
+                        data-show-count="true"
+                        aria-label="Discord"
+                      >
+                      </Discord>
+                    </a>
                   </li>
-                ) : null}
                 {githubUrl !== '' ? (
-                  <li className={'githubBtn'}>
-                    <GitHubButton
-                      href={githubUrl}
-                      data-show-count="true"
-                      aria-label="Star on GitHub"
-                    >
-                      Star
-                    </GitHubButton>
+                  <li className='btn'>
+                    <a href={githubUrl} title="GitHub" rel="noopener noreferrer" target="_blank">
+                      <Github
+                        size="24"
+                        aria-label="GitHub"
+                      >
+                      </Github>
+                    </a>
                   </li>
                 ) : null}
                 <li>

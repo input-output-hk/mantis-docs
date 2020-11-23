@@ -1,3 +1,8 @@
 [build]
   publish = "public"
   command = "npm run build"
+[[redirects]]
+  from = "/"
+  to = "/getting-started"
+  force = true
+  status = 200

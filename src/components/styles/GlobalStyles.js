@@ -1,7 +1,7 @@
 import { injectGlobal } from 'emotion';
 
 export const baseStyles = injectGlobal`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;600;700;0,900;1,700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -288,7 +288,7 @@ export const baseStyles = injectGlobal`
     -webkit-overflow-scrolling: touch;
   }
   .navBarUL li a {
-    color: #fff !important;
+    color: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: 1em;
@@ -334,18 +334,13 @@ export const baseStyles = injectGlobal`
     max-width:45rem;
     margin: 0 auto;
   }
-  .discordBtn, .twitterBtn {
+  .btn {
     border-radius: 4px;
-    border: solid 1px #d1d2d3;
-    background-color: #f1f5f8;
-    width: 20px;
-    height: 20px;
     padding-top: 2px;
-    margin-left: 8px;
-    display: flex;
+    margin-left: 15px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    opacity: .8;
     cursor: pointer;
   }
   .twitterBtn img {
@@ -354,8 +349,8 @@ export const baseStyles = injectGlobal`
   .discordBtn img {
     width: 10px !important;
   }
-  .discordBtn:hover, .twitterBtn:hover {
-    opacity: 1;
+  .btn:hover {
+    opacity: 0.8;
   }
   .discordBtn {
     img {
@@ -365,21 +360,20 @@ export const baseStyles = injectGlobal`
   /* Header section ends here */
   .sidebarTitle {
     /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
-    background-color: #f8f8f8;
-    padding: 18px 16px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #33ff99;
+    color: inherit;
+    padding: 18px 30px;
+    font-size: 14px;
+    font-weight: normal;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
+    a{
+      color: inherit;
+    }
   }
 
   .sideBarShow {
     display: none;
-  }
-
-  .sidebarTitle a {
-    color: #33ff99;
   }
 
   .accentCircle {
@@ -412,7 +406,6 @@ export const baseStyles = injectGlobal`
   }
 
   .sideBarUL {
-    margin-top: 32px;
   }
 
   .sideBarUL li {
@@ -433,6 +426,14 @@ export const baseStyles = injectGlobal`
     border-color: transparent currentcolor transparent transparent;
   }
 
+  .sideBarUL li a {
+    color: currentcolor
+  }
+
+  .sideBarUL li a:hover {
+    color: currentcolor;
+  }
+
   .collapser {
     background: transparent;
     border: none;
@@ -443,9 +444,17 @@ export const baseStyles = injectGlobal`
     cursor: pointer;
   }
 
+  a.doc-title {
+    color: currentcolor;
+  }
+
+  .showFrontLine > .active {
+    background: #000;
+  }
+
   .showFrontLine .active > a {
     background-color: ${props => props.theme.colors.primary};
-    color: #fff !important;
+    color: ${props => props.theme.colors.primary} !important;
   }
   .firstLevel ul li .collapser svg path {
     fill: #dcdcdc !important;
@@ -473,12 +482,8 @@ export const baseStyles = injectGlobal`
     padding-left: 15px;
   }
 
-  .showFrontLine .item > a:hover {
-    background-color: #001933;
-  }
 
   .sideBarUL .item .item {
-    margin-left: 16px;
   }
 
   .firstLevel > ul > .item {
@@ -486,7 +491,7 @@ export const baseStyles = injectGlobal`
   }
 
   .firstLevel ul .item a {
-    padding-left: 15px !important;
+    padding-left: 30px !important;
   }
 
   .showFrontLine .item .item {
@@ -496,11 +501,29 @@ export const baseStyles = injectGlobal`
   }
 
   .showFrontLine .item .active > a {
-    border-color: rgb(230, 236, 241) !important;
-    border-style: none none none solid;
-    border-width: 1px 0px 1px 1px;
+    border:none;
     background-color: ${props => props.theme.colors.primary} !important;
-    color: #fff;
+    color: ${props => props.theme.colors.text};
+    position: relative;
+    z-index: 1;
+  }
+
+  .sideBarUL .showFrontLine ul .active > a:before {
+    content: "";
+    width: 12px;
+    height: 24px;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMi4xIDI5LjIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyLjEgMjkuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMzM0ZGOTk7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLDguMWw4LjcsMjEuMWwzLjQtOC4xTDMuNCwwTDAsOC4xeiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat;
+    position: absolute;
+    display: inline-block;
+    z-index: 0;
+    top: 0.45rem;
+    left: 0.27rem;
+  }
+
+
+  .sectionHeading:hover {
+    cursor: pointer;
   }
 
   .sectionHeading, a.sectionHeading {
@@ -666,15 +689,15 @@ export const baseStyles = injectGlobal`
 
   .heading1 {
     font-size: 26px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.5;
     margin-bottom: 16px;
     margin-top: 32px;
   }
 
   .heading2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
     line-height: 1.5;
     margin-bottom: 16px;
     margin-top: 32px;
@@ -731,6 +754,7 @@ export const baseStyles = injectGlobal`
   }
   .topnav {
     -webkit-transition: top 0.5s, bottom 0.5s;
+    margin-left: auto;
   }
 
   @media (max-width: 767px) {
@@ -772,7 +796,8 @@ export const baseStyles = injectGlobal`
     }
     .topnav.responsive .navBarUL {
       display: block;
-      text-align: left;
+      text-align: center;
+      padding-top: 0.5rem;
     }
     .hiddenMobile {
       display: none !important;
@@ -790,6 +815,7 @@ export const baseStyles = injectGlobal`
     }
     .navBarULRight {
       position: static;
+      justify-content: flex-end;
     }
     .navBarUL {
       display: flex;
@@ -906,5 +932,10 @@ export const baseStyles = injectGlobal`
   button.sectionHeading {
     cursor:default;
     background:none;
+  }
+  .accent {
+    background-color: rgb(230,236,241);
+    height: 1px;
+    border-top: none;
   }
 `;
