@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
-import GitHubButton from 'react-github-btn';
 import { Github } from '@styled-icons/boxicons-logos/Github'
 import { Twitter } from '@styled-icons/boxicons-logos/Twitter'
 import { Discord } from '@styled-icons/boxicons-logos/Discord'

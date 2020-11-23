@@ -6,8 +6,8 @@ import ThemeProvider from './theme/themeProvider';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
 import RightSidebar from './rightSidebar';
+import Footer from './Footer';
 import config from '../../config.js';
-import Footer from '@input-output-hk/front-end-site-components/components/Footer'
 
 const SiteWrap = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
@@ -158,8 +158,8 @@ const Layout = ({ children, location, useFwTemplate }) => (
                   }
                 </RightSideBarWidth>
         </Wrapper>
-        <Footer variant='cardano' />
       </SiteWrap>
+      <Footer />
     </MDXProvider>
   </ThemeProvider>
 );
