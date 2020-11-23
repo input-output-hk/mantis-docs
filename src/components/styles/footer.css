@@ -18,6 +18,7 @@ footer .align-right {
 footer .bottom-links {
   margin: 1rem 0;
   display: inline-block;
+  text-align: left;
 }
 footer .title {
   max-width: 450px;
@@ -127,7 +128,7 @@ footer ul li a {
 .button-group .button {
   text-align: center;
   margin-right: 0.75rem;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   width: 100%;
   background-color: #34fe98;
   color:#000;
@@ -168,5 +169,18 @@ footer ul li a {
   .img-wrap {
     margin-top: 4rem;
     margin-bottom: 1rem;;
+  }
+  footer .bottom-links {
+    display: block;
+    text-align: center;
+  }
+  .button-group {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .button-group .button {
+    flex-basis: 100%;
+    margin: 1rem;
   }
 }
