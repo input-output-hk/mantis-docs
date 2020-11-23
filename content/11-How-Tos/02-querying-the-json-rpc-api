@@ -1,0 +1,40 @@
+---
+title: Querying the JSON RPC API
+metaTitle: Querying the JSON RPC API
+---
+
+Mantis supports all [standard web3 JSON-RPC APIs](https://eth.wiki/json-rpc/API#json-rpc-methods).
+
+## Enabling HTTP access
+
+Use the following Dkey in order to enable the HTTP RPC API access:
+```
+-Dmantis.network.rpc.http=true
+```
+
+Once enabled, you can access the HTTP API through port 8545 over HTTP or websockets.
+
+```
+curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' http://localhost:8545
+```
+
+
+## Geth console
+
+You may use the Geth Javascript console in order to access the API as well.
+
+1. Start Mantis with RPC enabled
+
+```
+./mantis-launcher etc -Dmantis.network.rpc.http=true
+```
+
+2. Run the Geth javasctipt console and attach to the endpoint
+
+3. Call an API method on console
+
+```
+> net.peerCount
+1
+> █
+```
