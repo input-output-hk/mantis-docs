@@ -5,33 +5,30 @@ metaTitle: How to configure the Mantis client
 
 # How to configure the Mantis client
 
-This section outlines how to configure the Mantis client. The Mantis client is flexible and its runtime behavior can be controlled through 3 main methods:
+This section outlines how to configure the Mantis client. The Mantis client is flexible and its runtime behavior can be controlled using three main methods:
 
- - Using preconfigured config files
- - Creating a custom config file
- - Runtime configuration with command line arguments from the shell using "Dkey" flags
+ - preconfigured config files
+ - creating a custom config file
+ - configuring runtime with command line arguments from the shell using "Dkey" flags
 
 ## Mantis Launcher
 
-We recommend using the mantis-launcher for ease of use, especially if using standard config on an existing network.
+We recommend using the mantis-launcher for ease of use, especially if you use standard config on the existing network.
 
-To run Mantis using the luancher, do the following:
-
-Navigate to the Mantis binaries root folder (ie. mantis/target/universal/mantis-3.0) and launch with network name.
+1. To run Mantis using the launcher, navigate to the Mantis binaries root folder (ie. mantis/target/universal/mantis-3.0) and launch with the network name:
 
 ```
 cd mantis/target/universal/mantis-3.0
 ./mantis-launcher <config-name>
 ```
 
-Replace <config-name> by whichever network you want to connect to and load that predefined network config which will include the corresponding `/chains/<chain-name>.conf` file. See [here](https://github.com/input-output-hk/mantis/blob/develop/src/main/resources/application.conf#L284) fore more.
+2. Replace <config-name> with any network you want to connect to and load the predefined network config, which should include the corresponding `/chains/<chain-name>.conf` file. See [here](https://github.com/input-output-hk/mantis/blob/develop/src/main/resources/application.conf#L284) for more.
 
-> Note: The main function of mantis-launcher is calling the `-Dconfig.file` configuration option with whatever parameter is being passed to it.
+> Note: The main function of the mantis-launcher calls the `-Dconfig.file` configuration option with any parameter being passed to it.
 
+## Using the Dkey
 
-### Dkey usage
-
-To change config options at runtime on commandline, you may use Dkey arguments and define the key and the value like so:
+To change config options at runtime on the command line, you can use Dkey arguments to define the key and the value as follows:
 
 ```
 ./mantis-launcher etc -Dkey=value
@@ -39,11 +36,11 @@ To change config options at runtime on commandline, you may use Dkey arguments a
 
 ## Data folder
 
-By default, the blockchain data, logs, keystore and all other files that Mantis creates are stored in the user’s home folder under a sub folder called `.mantis`. Each network will have its own subfolder, so `etc` (`./mantis/etc`) for the Ethereum Classic mainnet, `mordor` (`./mantis/mordor`) for the testnet data, etc.
+By default, the blockchain data, logs, keystore, and all other files that Mantis creates are stored in the user’s home folder under a subfolder called `.mantis`. Each network will have its own subfolder, that is `etc` (`./mantis/etc`) for the Ethereum Classic mainnet, `mordor` (`./mantis/mordor`) for the testnet data, etc.
 
 ### Conf file
 
-One way to change this setting is in the conf files. Look for, or add a mantis.datadir option like so:
+You can change settings by going to conf files. There, you can look for or add a mantis.datadir option as follows:
 
 ```
 mantis {
@@ -68,7 +65,7 @@ The discovery function is active by default. The network is queried for addition
 
 ### Conf file
 
-To prevent this and use only the bootstrap nodes as listed in the `network.conf` go to:
+To prevent this and use *only* the bootstrap nodes as listed in the `network.conf` go to:
 `# discovery-enabled = true`.
 Now, you can change value `true` to `false` to disable the discovery functionality:
 `discovery-enabled = false`.
@@ -80,16 +77,17 @@ Now, you can change value `true` to `false` to disable the discovery functionali
 
 ## Fast sync
 
-`Fast sync` will sync your local blockchain data faster than a full (or archival) sync. It will download blocks and only verify the proof of work of each block instead of downloading and reprocessing every transaction from genesis.
+`Fast sync` can synchronize your local blockchain data faster than a full (or archival) sync. It downloads blocks and only verifies the proof of work of each block instead of downloading and reprocessing every transaction from genesis.
 
-> Note: State tries are downloaded in parallel to blocks and will take considerably longer to do so.
+> Note: State tries are downloaded in parallel with blocks and will take considerably longer to do so.
 
 ### Conf file
-Fast sync is enabled by default.
-To disable this, you can edit the `sync.conf` by locating the following line:
+Fast sync is enabled by default. To disable this, you can:
+
+1. Edit the `sync.conf` by locating the following line:
 `# do-fast-sync = true`
 
-amd replace with 'true':
+2. Then, replace 'true' with 'false':
 `do-fast-sync = false`
 
 ### Dkey
@@ -99,7 +97,7 @@ amd replace with 'true':
 
 ## Pruning
 
-By default, the database is pruned of state trie nodes that are no longer needed.  You can prevent this functionality and keep all intermediate state nodes.
+By default, the database is pruned of state trie nodes that are no longer needed. You can prevent this functionality and keep all intermediate state nodes.
 
 For this, edit the `storage.conf` file and replace `# mode = "basic"` with:
 `mode = "archive"`.
@@ -123,6 +121,6 @@ To enable the HTTP server,
 
 ## Notes:
 
-> The main configuration file in Mantis is `application.conf`, located in `mantis/src/main/resources`. For fine tweaking, locate and edit that file.
+> The main configuration file in Mantis is `application.conf`, which is located in `mantis/src/main/resources`. For fine tweaking, locate and edit that file.
 
 > For more information and depth on how to configure SBT packages, see [`sbt-native-packager` documentation](https://www.scala-sbt.org/sbt-native-packager/archetypes/java_app/customize.html?highlight=configuration).
