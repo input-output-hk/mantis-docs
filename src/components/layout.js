@@ -66,9 +66,6 @@ const Wrapper = styled('div')`
     color: ${({ theme }) => theme.colors.text};
     position: relative;
     z-index: 1;
-  }
-
-  .showFrontLine .active a {
     font-weight: 900;
   }
 
