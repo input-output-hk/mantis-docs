@@ -12,7 +12,7 @@ const lightTheme = {
     panelBackground: 'rgba(0, 0, 0, 0.05)',
     accent: 'rgba(0, 0, 0, 0.1)',
     heading: '#000',
-    text: '#3B454E',
+    text: '#000000',
     preFormattedText: 'rgb(245, 247, 249)',
     link: '#33FF99',
     info: '#33FF99',

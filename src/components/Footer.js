@@ -14,7 +14,7 @@ const Footer = () => (
     <div className="flex-grid">
       <div className="col">
         <div className="img-wrap">
-          <img src={mantisLogo} alt="Matis" height="51px"/>
+          <img src={mantisLogo} alt="Mantis" height="51px"/>
         </div>
         <ul>
           <li><Link to='/downloads'>Downloads</Link></li>
@@ -23,7 +23,7 @@ const Footer = () => (
         </ul>
         <div className='button-group'>
           <a href="" className="button"><span>Discover Mantis</span></a>
-          <a href="" className="button"><span>Download Mantis Wallet</span></a>
+          <a href="" className="button"><span>Download Wallet</span></a>
         </div>
       </div>
       <div className="col flex-inner">

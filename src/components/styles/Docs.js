@@ -43,7 +43,7 @@ export const Edit = styled('div')`
     border-radius: 3px;
     transition: all 0.2s ease-out 0s;
     text-decoration: none;
-    color: rgb(36, 42, 49);
+    color: ${props => props.theme.colors.text};
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
     height: 30px;
@@ -74,7 +74,10 @@ export const StyledMainWrapper = styled.div`
 
   a {
     transition: color 0.15s;
-    color: ${props => props.theme.colors.link};
+    color: ${props => props.theme.colors.text};
+  }
+  a:hover {
+    text-decoration: underline;
   }
 
   code {

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import NightImage from './images/night.png';
-import DayImage from './images/day.png';
+import NightImage from './images/dark.svg';
+import DayImage from './images/light.svg';
 
 const StyledSwitch = styled('div')`
   display: flex;
@@ -38,7 +38,6 @@ const StyledSwitch = styled('div')`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -46,8 +45,8 @@ const StyledSwitch = styled('div')`
   .slider:before {
     position: absolute;
     content: '';
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 100%;
     left: 0px;
     bottom: 4px;
     top: 0;
@@ -55,33 +54,18 @@ const StyledSwitch = styled('div')`
     margin: auto 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    box-shadow: 0 0px 15px #2020203d;
-    background: white url(${NightImage});
+    background: url(${NightImage});
     background-repeat: no-repeat;
     background-position: center;
-  }
-
-  input:checked + .slider {
-    background: linear-gradient(to right, #fefb72, #f0bb31);
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(24px);
-    -ms-transform: translateX(24px);
-    transform: translateX(24px);
-    background: white url(${DayImage});
+    background: url(${DayImage});
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
 
-  .slider.round:before {
-    border-radius: 50%;
-  }
 `;
 
 export const DarkModeSwitch = ({ isDarkThemeActive, toggleActiveTheme }) => (
