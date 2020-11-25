@@ -2,4 +2,50 @@
 title: Treasury
 metaTitle: Treasury
 ---
-Consequat pariatur consectetur consequat aliquip aute est culpa amet officia velit. Eu est anim sint proident minim laboris. Veniam non laborum incididunt eu ad. Fugiat veniam eu labore in ut. Officia qui incididunt laboris id proident. Eiusmod amet incididunt est duis sit anim est pariatur irure esse.
+
+
+ECIP link: (https://github.com/ethereumclassic/ECIPs/blob/master/_specs/ecip-1098.md)
+
+## Context:
+
+At IOHK, we believe the Ethereum community as a whole must send a strong signal to deliver a roadmap and execute a plan to attract more talented core developers, Dapp developers and bring in more users to the space.
+This should promote greater developer engagement and independance and ultimately, will give the ecosystem sustainability it needs for *innovation, stability and growth*.
+
+Since the proposal introduces a large change at protocol level, therefore, the Proto-Treasury introduces simple on-chain governance and built-in obsolescence trigger in order for the community to directly assess its value.
+In other words, if it fails to meet expectations, it will be able to shut off.
+
+
+## Motivation
+
+Why have a Treasury? In short, Blockchains are complex projects and they need substantial funding in order to become sustainable. On top of that, the recent security problems in the current Ethereum Classic chain has seen with the 51% attacks have shown the need for consistent innovation in order to garuantee the project a long
+
+> Note: 51% attacks occur when a group of miners of more than 50% of the network's mining hash rate decide to colude in order to cause a netqwork disruption.
+
+While security can be increased threough other means (includind another proposal of ours, [ECIP 1097](https://ecips.ethereumclassic.org/ECIPs/ecip-1097)), it doesn't seem to be a good, long-term solution.
+A clear vision and participation in the ecosystem comes through funding, in order to obtain innovation and diversity from other blockchain projects, including PoS and newer blockchain projects.
+
+The Proto-Treasury will offer sustainable and consistent funding for underliying blockchain developement and maintenance.
+
+## Solution
+
+The proposed Proto-Treasury solution is simple- optimizing for speed and implementation. The treasury system includes a specification and a solidity smart contract which can be found in the [Github repository](https://github.com/input-output-hk/etc_treasury_system).
+
+If accepted, the proposal means to distribute 80% of exiting mining rewards to Miners and 20% to the Proto-Treasury smart contract. This treasury will then be distributed according to what the community decides.
+
+Miners will be able to choose whether to send the 20% to the Proto-Treasury or burn the rewards through an op-out mechanism.
+
+If, the proposal is not accepted, and the Proto-Treasury smart contracts are shut off, miners recover access to full rewards by default.
+
+## Distribution
+
+Initially, the distribution will be going to 3 teams of client developers as well as to the open community fund.
+Proto-Treasury rewards are split 30% to each team + 10% for open community fund.
+
+Through the on-chain smart contract governance, a Super-majority vote of 60% will be enough to add or remove members from the smart contract as well as being able to shut down the whole treasury.
+
+
+For further reading on the subject; check out the following links:
+
+* [Proto Treasury ECIP-1098](https://ecips.ethereumclassic.org/ECIPs/ecip-1098)
+* [ECIP-1098 Issues Discussion](https://github.com/ethereumclassic/ECIPs/issues/350)
+* [Podcast describing the Proposal w/ Brian Mckenna](https://www.youtube.com/watch?v=55Quk7MDvXA)
