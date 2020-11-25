@@ -146,7 +146,7 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                   </li>
                 ) : null}
                   <li className='btn'>
-                    <a href="https://twitter.com" title="Twitter" rel="noopener noreferrer" target="_blank">
+                    <a href="https://twitter.com/mantis_io" title="Twitter" rel="noopener noreferrer" target="_blank">
                       <Twitter
                         size="24"
                         data-show-count="true"
@@ -156,7 +156,7 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                     </a>
                   </li>
                   <li className='btn'>
-                    <a href="https://discord.com" title="Discord" rel="noopener noreferrer" target="_blank">
+                    <a href="https://discord.gg/VDQDJQJp" title="Discord" rel="noopener noreferrer" target="_blank">
                       <Discord
                         size="24"
                         data-show-count="true"
