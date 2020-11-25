@@ -49,8 +49,8 @@ const NavBarWrapper = styled('div')`
     }
   }
   .navBarBrand img {
-    width:253px;
-    height: 43px;
+    width:169px;
+    height: 29px;
   }
   .navBarDefault {
     &.light-header {
@@ -67,7 +67,7 @@ const NavBarWrapper = styled('div')`
 
 const StyledBgDiv = styled('div')`
   height: 60px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
   background-color: #f8f8f8;
   position: relative;
   display: none;

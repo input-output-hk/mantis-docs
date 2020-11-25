@@ -52,7 +52,8 @@ const Sidebar = styled('aside')`
   position: sticky;
   top: 0;
   padding-right: 0;
-  box-shadow: 5px 0 4px -4px rgba(175, 158, 232, 0.4);
+  border-right: 1px solid #d8d8d8;
+  /* box-shadow: 5px 0 4px -4px rgba(175, 158, 232, 0.4); */
   /* -webkit-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.4); */
 
   @media only screen and (max-width: 1023px) {

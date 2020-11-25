@@ -2,10 +2,14 @@ footer {
   width: 100%;
   background: #000!important;
   color: #fff;
-  padding: 3rem 6rem;
+  padding: 3rem 2rem;
+  font-size: 16px;
 }
 footer a {
   color: #fff;
+}
+footer a:hover {
+  color: #34fe98;
 }
 footer .bottom-text {
   margin-top: 2rem;
@@ -21,19 +25,25 @@ footer .bottom-links {
   text-align: left;
 }
 footer .title {
-  max-width: 450px;
   display: block;
   margin-bottom: 4rem;
-  line-height: 1.5;
 }
 footer .title h1 {
+  max-width: 47.5%;
+  font-size: 3.6rem;
+  font-weight: 900;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+footer .title p {
+  font-size: 1rem;
 }
 footer ul {
   list-style: none;
+  padding: 1.5rem 0 1.5rem 0;
 }
 footer ul li {
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 footer ul li a {
   color: #fff;
@@ -127,12 +137,12 @@ footer ul li a {
 }
 .button-group .button {
   text-align: center;
-  margin-right: 0.75rem;
-  padding: 1rem 0 1rem 0;
+  margin-left: 1.5rem;
+  padding: 1.8rem 0;
   width: 100%;
   background-color: #34fe98;
   color:#000;
-  font-weight: bold;
+  font-weight: 600;
   -ms-transform: skewX(30deg);
   -webkit-transform: skewX(30deg);
   transform: skewX(30deg);
@@ -145,6 +155,11 @@ footer ul li a {
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
+  background-size: 200% 100%;
+    background-image: linear-gradient(to right, #33FF99 50%, #37E88F 50%);
+    -webkit-transition: background-position 0.3s;
+    -moz-transition: background-position 0.3s;
+    transition: background-position 0.3s;
 }
 .button-group .button span {
   -ms-transform: skewX(-30deg);
@@ -152,7 +167,10 @@ footer ul li a {
   transform: skewX(-30deg);
   display: inline-block;
 }
-@media(max-width: 1250px){
+.button-group .button:hover {
+  background-position: -100% -100%;
+}
+@media(max-width: 1050px){
   .flex-grid, .col {
     display: block;
   }
@@ -182,5 +200,8 @@ footer ul li a {
   .button-group .button {
     flex-basis: 100%;
     margin: 1rem;
+  }
+  footer .title h1 {
+    max-width: 1000%;
   }
 }

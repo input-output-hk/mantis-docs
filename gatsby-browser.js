@@ -1,6 +1,7 @@
 import "fontsource-montserrat/500.css";
 import "fontsource-montserrat/600.css";
 import "fontsource-montserrat/700.css";
+import "fontsource-montserrat/900.css";
 
 export const onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(
