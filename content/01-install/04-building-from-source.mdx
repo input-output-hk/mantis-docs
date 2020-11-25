@@ -1,4 +1,7 @@
-# Building Mantis from source
+---
+title: Building Mantis from Source
+metaTitle: Building Mantis from Source
+---
 
 You can build the Mantis client from source as an alternative to its downloading. You can do so using SBT or Nix.
 
@@ -34,7 +37,7 @@ As an alternative to building with SBT, you can use Nix.
 ### Requirements to build with Nix
 
 - Nix (Install instructions on https://github.com/NixOS/nix#installation)
-- To load environment variables, run. `/home/<user>/.nix-profile/etc/profile.d/nix.sh`
+- To load environment variables, run `/home/<user>/.nix-profile/etc/profile.d/nix.sh`
 
 ### Build the client
 
@@ -54,7 +57,7 @@ sbtix-gen-all2
 ### What to do in case of failure
 
 If Nix build fails during the "ensure Nix expressions are up-to-date" step, check the artifacts of that step. There should be a patch provided, which you can apply locally with:
-patch -p1 < downloaded.patch
+`patch -p1 < downloaded.patch`
 
 This patch will update the lock files for you.
 
@@ -69,7 +72,7 @@ This patch will update the lock files for you.
 To resolve this issue, please make sure to update your version of Nix. fetchGit support for submodules is relatively recent.
 
 Update the version of Nix you are using, otherwise:
-- Remove the "submodules = true;" argument from fetchGit (in ./nix/pkgs/mantis/default.nix).
+- Remove the "submodules = true;" argument from fetchGit (in `./nix/pkgs/mantis/default.nix`).
 - git submodule update --recursive --init
 - nix-build
 
