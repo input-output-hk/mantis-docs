@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import NightImage from './images/dark.svg';
+import NightImage from './images/switch-dark.svg';
 import DayImage from './images/light.svg';
 
 const StyledSwitch = styled('div')`

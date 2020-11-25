@@ -51,7 +51,7 @@ const Footer = () => (
     </div>
     <div class="bottom-text">
       <div class="bottom-links">
-        <a href="">Terms & Privacy Policy</a>
+        <Link to="/resources/terms">Terms & Privacy Policy</Link>
       </div>
       <span className="align-right">
         © {new Date().getFullYear()} All rights reserved.
