@@ -43,7 +43,7 @@ export const Edit = styled('div')`
     border-radius: 3px;
     transition: all 0.2s ease-out 0s;
     text-decoration: none;
-    color: ${props => props.theme.colors.text};
+    color: #555;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
     height: 30px;
