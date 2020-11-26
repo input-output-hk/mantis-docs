@@ -25,6 +25,9 @@ export const baseStyles = injectGlobal`
   body {
     font-family: 'Montserrat', sans-serif;
   }
+  body {
+    font-size: 14px;
+  }
   a {
     transition: color 0.15s;
     /* color: #663399; */
@@ -517,8 +520,8 @@ export const baseStyles = injectGlobal`
     position: absolute;
     display: inline-block;
     z-index: 0;
-    top: 0.45rem;
-    left: 0.27rem;
+    top: 0.65rem;
+    left: 0.37rem;
   }
 
 
@@ -688,11 +691,12 @@ export const baseStyles = injectGlobal`
   }
 
   .heading1 {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 16px;
     margin-top: 32px;
+    letter-spacing: 0.62px
   }
 
   .heading2 {
@@ -701,6 +705,7 @@ export const baseStyles = injectGlobal`
     line-height: 1.5;
     margin-bottom: 16px;
     margin-top: 32px;
+    letter-spacing: 0.62px
   }
 
   .heading3 {

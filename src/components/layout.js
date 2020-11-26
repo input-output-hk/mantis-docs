@@ -58,15 +58,14 @@ const Wrapper = styled('div')`
 
   .sideBarUL li a, .sectionHeading, .doc-title {
     color: ${({ theme }) => theme.colors.text};
+    letter-spacing: 0.4px;
+    padding: 10px 0;
   }
 
   .showFrontLine .active > a {
     color: ${({ theme }) => theme.colors.text};
     position: relative;
     z-index: 1;
-  }
-
-  .showFrontLine .active a {
     font-weight: 900;
   }
 
