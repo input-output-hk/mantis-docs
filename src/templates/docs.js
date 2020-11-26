@@ -142,7 +142,7 @@ export default class MDXRuntimeTest extends Component {
           
           {!isFullWidth &&
             <div className={'addPaddTopBottom'}>
-              <NextPrevious mdx={mdx} nav={nav} />
+             
             </div>
           }
         </Layout>
