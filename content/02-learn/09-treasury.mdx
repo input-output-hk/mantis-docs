@@ -8,43 +8,39 @@ ECIP link: (https://github.com/ethereumclassic/ECIPs/blob/master/_specs/ecip-109
 
 ## Context:
 
-At IOHK, we believe the Ethereum community as a whole must send a strong signal to deliver a roadmap and execute a plan to attract more talented core developers, Dapp developers and bring in more users to the space.
-This should promote greater developer engagement and independance and ultimately, will give the ecosystem sustainability it needs for *innovation, stability and growth*.
+At IOHK, we believe that community input is essential to deliver a robust Ethereum Classic roadmap and execute its plans by attracting talented DApp developers. Promoting greater engagement is crucial for establishing independence and ultimately, this grants the ecosystem sustainability for *innovation, stability, and growth*.
 
-Since the proposal introduces a large change at protocol level, therefore, the Proto-Treasury introduces simple on-chain governance and built-in obsolescence trigger in order for the community to directly assess its value.
-In other words, if it fails to meet expectations, it will be able to shut off.
-
+Introducing a large change at the protocol level, the Proto-Treasury proposes straightforward on-chain governance and built-in obsolescence triggers in order for the community to directly assess its value.
+In other words, in case the proposal does not meet expectations, it will stop operating. 
 
 ## Motivation
 
-Why have a Treasury? In short, Blockchains are complex projects and they need substantial funding in order to become sustainable. On top of that, the recent security problems in the current Ethereum Classic chain has seen with the 51% attacks have shown the need for consistent innovation in order to garuantee the project a long
+The motivation for having a treasury in place is to establish a steady funding income in order for a blockchain to become sustainable. Additionally, recent security problems – seen in the current Ethereum Classic blockchain – position a threat to 51% attacks, which requires a need for consistent innovation in order to guarantee the project’s support and development. 
 
-> Note: 51% attacks occur when a group of miners of more than 50% of the network's mining hash rate decide to colude in order to cause a netqwork disruption.
+> Note: 51% attacks occur when a group of miners (of more than 50% of the network's mining hash rate) decide to collude in order to cause network disruption.
 
-While security can be increased threough other means (includind another proposal of ours, [ECIP 1097](https://ecips.ethereumclassic.org/ECIPs/ecip-1097)), it doesn't seem to be a good, long-term solution.
-A clear vision and participation in the ecosystem comes through funding, in order to obtain innovation and diversity from other blockchain projects, including PoS and newer blockchain projects.
+While the network security can be increased through other means (including another proposal of ours, [ECIP 1097](https://ecips.ethereumclassic.org/ECIPs/ecip-1097)), it doesn't appear to be the best, long-term solution.
+Therefore, establishing the treasury for funding purposes ensures a clear vision of the substantial system maintenance focused to obtain innovation and diversity from other projects, including proof of stake (PoS) and newer blockchains.
 
-The Proto-Treasury will offer sustainable and consistent funding for underliying blockchain developement and maintenance.
+The Proto-Treasury will offer sustainable and consistent funding for the Ethereum Classic underlying blockchain development and maintenance.
 
 ## Solution
 
-The proposed Proto-Treasury solution is simple- optimizing for speed and implementation. The treasury system includes a specification and a solidity smart contract which can be found in the [Github repository](https://github.com/input-output-hk/etc_treasury_system).
+The proposed Proto-Treasury solution is straightforward in its optimization for speed and implementation. The treasury system also includes a specification and a Solidity smart contract that can be found in the [Github repository](https://github.com/input-output-hk/etc_treasury_system).
 
-If accepted, the proposal means to distribute 80% of exiting mining rewards to Miners and 20% to the Proto-Treasury smart contract. This treasury will then be distributed according to what the community decides.
+If the proposal is accepted, it foresees to distribute 80% of existing mining rewards to miners and 20% to the Proto-Treasury smart contract. This treasury will then be distributed according to the community decision.
 
-Miners will be able to choose whether to send the 20% to the Proto-Treasury or burn the rewards through an op-out mechanism.
+Miners will be able to choose whether to send 20% to the Proto-Treasury or burn rewards through an op-out mechanism.
 
-If, the proposal is not accepted, and the Proto-Treasury smart contracts are shut off, miners recover access to full rewards by default.
+If the proposal is not accepted, and the Proto-Treasury smart contracts are not active, miners will recover access to full rewards by default.
 
 ## Distribution
 
-Initially, the distribution will be going to 3 teams of client developers as well as to the open community fund.
-Proto-Treasury rewards are split 30% to each team + 10% for open community fund.
+Initially, the treasury funds are going to be distributed to three teams of client developers and the open community fund, where 30% will be allocated to each team and 10% - to the open community fund.
 
-Through the on-chain smart contract governance, a Super-majority vote of 60% will be enough to add or remove members from the smart contract as well as being able to shut down the whole treasury.
+Through the on-chain smart contract governance, a super-majority vote of 60% will be enough to add or remove members from the smart contract as well as to close the whole treasury.
 
-
-For further reading on the subject; check out the following links:
+For further reading on the subject, please follow these links:
 
 * [Proto Treasury ECIP-1098](https://ecips.ethereumclassic.org/ECIPs/ecip-1098)
 * [ECIP-1098 Issues Discussion](https://github.com/ethereumclassic/ECIPs/issues/350)
