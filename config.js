@@ -7,7 +7,7 @@ const config = {
   },
   header: {
     logo: '/images/mantis-docs-logo.svg',
-    logoLink: '/getting-started',
+    logoLink: '/first-steps',
     title: "",
     githubUrl: 'https://github.com/input-output-hk/mantis-docs',
     helpUrl: '',
@@ -37,16 +37,15 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
-      '/00-getting-started/', // add trailing slash if enabled above
+      '/00-first-steps/', // add trailing slash if enabled above
       // '/02-getting-started/'
     ],
     collapsedNav: [ // add headings here if to be collapsed by default
       // '/02-getting-started/', // add trailing slash if enabled above
       '/install',
       '/learn',
-      '/clients',
-      '/creating-a-private-network',
-      '/reference',
+      '/how-tos',
+      '/resources',
     ],
     links: [{  }],
     frontLine: true, // This toggles collapse arrows

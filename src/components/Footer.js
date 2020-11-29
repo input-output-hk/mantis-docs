@@ -18,7 +18,7 @@ const Footer = () => (
         </div>
         <ul>
           <li><Link to='/downloads'>Downloads</Link></li>
-          <li><Link to='/getting-started'>Documentation</Link></li>
+          <li><Link to='/first-steps'>Documentation</Link></li>
           <li><a href='https://www.reddit.com/r/mantisclient/' target="_blank" rel="noopener noreferrer">Reddit</a></li>
         </ul>
         <div className='button-group'>
