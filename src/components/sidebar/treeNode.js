@@ -34,7 +34,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
 
 
 
-  if ((!location && url === "/first-steps") || (!location && url === "/first-steps/")) {
+  if ((!location && url === "/first-steps/getting-started") || (!location && url === "/first-steps/getting-started/")) {
     active = true
   }
 
