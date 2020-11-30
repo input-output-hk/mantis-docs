@@ -3,7 +3,8 @@ title: Building Mantis from Source
 metaTitle: Building Mantis from Source
 ---
 
-You can build the Mantis client from source as an alternative to its downloading. You can do so using SBT or Nix.
+We recommend using the [client's pre-built binaries from our releases](https://github.com/input-output-hk/mantis/releases) for most users.
+You can build the Mantis client from source as an alternative to its downloading. And You can do so using [SBT](#sbt) or [Nix](#nix).
 
 ## SBT
 
@@ -76,7 +77,11 @@ Update the version of Nix you are using, otherwise:
 - git submodule update --recursive --init
 - nix-build
 
-## Building Mantis wallet from source
+
+## Mantis wallet from source
+
+We recommend using the [pre-built binaries](https://github.com/input-output-hk/mantis-wallet/releases) in releases for most users.
+The following are the instructions to build the Mantis wallet from source.
 
 ### Requirements
 
@@ -88,14 +93,51 @@ Update the version of Nix you are using, otherwise:
 To clone and initialize your project, run the following command:
 
 ```
-	git clone git@github.com:input-output-hk/mantis-wallet.git
-	cd mantis-wallet
+git clone git@github.com:input-output-hk/mantis-wallet.git
+cd mantis-wallet
 ```
 
-Running the yarn command in the project directory will download the dependencies. After this, you can run the script below:
+Running the yarn command in the project directory will download the dependencies.
+
 ```
-	yarn
-	yarn build-renderer
-	yarn build-main
+yarn
+```
+
+Build the app to the build folder.
+```
+yarn build-renderer
+yarn build-main
+```
+
+`yarn build-renderer` and `yarn build-main` followed by `yarn electron` will open the production version of the Electron application.
+```
+yarn electron
+```
+
+For distribution files, build the storybook, followed by the distribution build:
+
+`yarn build-storybook` creates the static storybook build in the `storybook-static` folder.
+```
+yarn build-storybook
+```
+
+Now build your appropriate package, depending on your operating system:
+```
+yarn build-dist # for Linux of macOS
+# or
+yarn build-dist-win # for Windows
+```
+
+Builds the main process code to the build/main directory. It's required to be run before running electron-dev or electron
+
+```
+	yarn electron-dev
+```
+
+yarn electron-dev will open the Electron application in debug mode.
+
+```
 	yarn electron
 ```
+
+If you are looking for the developer build, follow the process documented in the [wallet README](https://github.com/input-output-hk/mantis-wallet#scripts-for-development) for more details.

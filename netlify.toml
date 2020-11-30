@@ -3,6 +3,6 @@
   command = "npm run build"
 [[redirects]]
   from = "/"
-  to = "/getting-started"
+  to = "/first-steps/getting-started"
   force = true
   status = 200

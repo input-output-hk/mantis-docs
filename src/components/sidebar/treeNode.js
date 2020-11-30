@@ -34,7 +34,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
 
 
 
-  if ((!location && url === "/getting-started") || (!location && url === "/getting-started/")) {
+  if ((!location && url === "/first-steps/getting-started") || (!location && url === "/first-steps/getting-started/")) {
     active = true
   }
 
@@ -42,8 +42,8 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
 
   return (
     <li className={calculatedClassName}>
-      {hasChildren 
-        ? title && 
+      {hasChildren
+        ? title &&
           <div>
             {borderTop ? <hr className="accent"/> : ''}
             <a activeClassName="active" className='sectionHeading' onClick={collapse} >
@@ -56,8 +56,8 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
               </a>
               {isCollapsed ? <hr  className="hide accent" /> : ''}
             </div>
-        : 
-        title && 
+        :
+        title &&
           <Link activeClassName="active" to={url}>
             {title}
             {!config.sidebar.frontLine && title && hasChildren ? (
