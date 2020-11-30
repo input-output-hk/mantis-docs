@@ -7,7 +7,7 @@ const config = {
   },
   header: {
     logo: '/images/mantis-docs-logo.svg',
-    logoLink: '/first-steps',
+    logoLink: '/first-steps/getting-started',
     title: "",
     githubUrl: 'https://github.com/input-output-hk/mantis-docs',
     helpUrl: '',
