@@ -12,9 +12,9 @@ Use the following Dkey in order to enable the HTTP RPC API access:
 -Dmantis.network.rpc.http=true
 ```
 
-Once enabled, you can access the HTTP API through port 8545 over HTTP or websockets.
+Once enabled, you can access the HTTP API through port 8545 over HTTP or WebSockets.
 
-Example:
+You can use an example below:
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' http://localhost:8545
@@ -23,17 +23,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ## Geth console
 
-You may use the Geth Javascript console in order to access the API as well.
+You can also use the Geth Javascript console to access the API. For this, follow the steps below:
 
-1. Start Mantis with RPC enabled
+1. Start Mantis with RPC enabled:
 
 ```
 ./mantis-launcher etc -Dmantis.network.rpc.http=true
 ```
 
-2. Run the Geth javasctipt console and attach to the endpoint
+2. Run the Geth Javascript console and attach to the endpoint.
 
-3. Call an API method on console
+3. Call an API method on the console:
 
 ```
 > net.peerCount
