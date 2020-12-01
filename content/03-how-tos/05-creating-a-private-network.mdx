@@ -3,45 +3,44 @@ title: How to Create a Private Network
 metaTitle: How to Create a Private Network
 ---
 
-# How to set up a standalone private Mantis network
+# Setting up a standalone private Mantis network
 
-Private networks provide a great environment for testing purposes, which can have low or no difficulty for mining, and are much faster processing transactions than Ethereum Classic mainnet.
+Private networks provide a conducive environment for testing purposes also requiring less mining effort. Private networks are much faster in terms of transaction processing being compared to the Ethereum Classic mainnet.
 This section outlines how to set up a standalone private Mantis network.
-
 
 ## Create a custom conf file
 
-In order to create a private network using Mantis, you will need to create a custom conf file. We will use eht `etc.conf` file as a template.
+1. To create a private network using Mantis, you will first need to create a custom conf file. Below we use eht `etc.conf` file as a template:
 
 ```
 cp mantis/src/universal/conf/etc.conf mantis/src/universal/conf/custom.conf
 ```
 
-Edit conf file to point to options
+2. Then, you can edit the `conf` file to point to options. 
 
-## Create custom genesis file
+## Create a custom genesis file
 
-Edit a genesis file and/or make your own from scratch.
-
+You can create a custom genesis file by editing it and/or making your own from scratch.
 
 > Make sure to verify and define the initial allocations in the `alloc` key.
 
 
-## Run Mantis on private network
+## Run Mantis on the private network
+
+To launch Mantis on the private network, run this command:
 
 ```
 ./bin/mantis-launcher custom
 ```
-
-
-That's it. Your network is setup and running.
+Your network is now set up and operating.
 
 ## Optional
 
-### Connect to explorer
+### Connect to the explorer
 
-###Connect to faucet
+### Connect to the faucet
 
 ### Other clients
 
-If you want other clients to connect to the private network, no further configuration is needed. They should be able to discover eachother and sync without a problem, so long as the network doens't have any new Sagano testnet features not implemented in other clients.
+In case you wish to connect other clients to your private network, you don’t need any additional configuration. They should be able to discover each other and synchronize seamlessly as long as the network doesn’t have any new Sagano testnet features that are not implemented in other clients.
+

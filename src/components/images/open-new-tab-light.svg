@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons/open-new-tab-light</title>
+    <g id="Zeplin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25" stroke-linecap="round">
+        <g id="01-Mantis-Website-Enterprise-C-Desktop-Copy" transform="translate(-651.000000, -28.000000)" stroke="#000000" stroke-width="1.2">
+            <g id="01-Header-nav" transform="translate(75.000000, 23.000000)">
+                <g id="Group-4" transform="translate(446.000000, 2.000000)">
+                    <g id="Group" transform="translate(130.000000, 0.000000)">
+                        <g id="icons/chevron-right-light" transform="translate(5.000000, 5.500000) rotate(-45.000000) translate(-5.000000, -5.500000) translate(3.000000, 1.000000)">
+                            <g transform="translate(0.000000, 0.400000)">
+                                <line x1="0" y1="5.96855898e-14" x2="3.60624458" y2="3.60624458" id="Line-2-Copy"></line>
+                                <line x1="0" y1="3.6" x2="3.60624458" y2="7.20624458" id="Line-2-Copy-2" transform="translate(1.803122, 5.403122) scale(1, -1) translate(-1.803122, -5.403122) "></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
