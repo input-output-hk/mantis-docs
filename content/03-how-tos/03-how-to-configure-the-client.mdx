@@ -54,7 +54,7 @@ mantis {
 You can also change this setting by setting a Dkey parameter at runtime:
 
 ```
--Dmantis.keyStore.keystore-dir=/new/datadir/location/
+-Dmantis.datadir=/new/datadir/location
 ```
 
 > Note: You cannot use the `~` shortcut to define the new location.
@@ -82,9 +82,9 @@ Now, you can change value `true` to `false` to disable the discovery functionali
 > Note: State tries are downloaded in parallel with blocks and will take considerably longer to do so.
 
 ### Conf file
-Fast sync is enabled by default. To disable this, you can:
+To disable this, you can:
 
-1. Edit the `sync.conf` by locating the following line:
+1. Edit the conf file by locating the following line:
 `# do-fast-sync = true`
 
 2. Then, replace 'true' with 'false':
@@ -99,8 +99,6 @@ Fast sync is enabled by default. To disable this, you can:
 
 By default, the database is pruned of state trie nodes that are no longer needed. You can prevent this functionality and keep all intermediate state nodes.
 
-For this, edit the `storage.conf` file and replace `# mode = "basic"` with:
-`mode = "archive"`.
 
 ### Dkey
 ```
