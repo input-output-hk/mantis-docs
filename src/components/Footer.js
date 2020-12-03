@@ -17,9 +17,10 @@ const Footer = () => (
           <img src={mantisLogo} alt="Mantis" height="51px"/>
         </div>
         <ul>
-          <li><Link to='/downloads'>Downloads</Link></li>
-          <li><Link to='/first-steps'>Documentation</Link></li>
+          <li><Link to='/first-steps/downloads'>Downloads</Link></li>
+          <li><Link to='/first-steps/getting-started'>Documentation</Link></li>
           <li><a href='https://www.reddit.com/r/mantisclient/' target="_blank" rel="noopener noreferrer">Reddit</a></li>
+          <li><a href='https://discord.gg/CvxPUDEm' target="_blank" rel="noopener noreferrer">Discord</a></li>
         </ul>
         <div className='button-group'>
           <a href="https://docs.mantisclient.io/first-steps/getting-started" className="button"><span>Discover Mantis</span></a>
