@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
 const Footer = () => (
   <footer>
     <div className="title">
-      <h1>"Liquorice sweet roll tootsie roll lemon drops croissant jelly ya dessert."</h1>
+      <h1>"We're are building a beautiful and competitive roadmap for the future."</h1>
       <p>Charles Hoskinson - CEO, IOHK</p>
     </div>
     <div className="flex-grid">
@@ -22,8 +22,8 @@ const Footer = () => (
           <li><a href='https://www.reddit.com/r/mantisclient/' target="_blank" rel="noopener noreferrer">Reddit</a></li>
         </ul>
         <div className='button-group'>
-          <a href="" className="button"><span>Discover Mantis</span></a>
-          <a href="" className="button"><span>Download Wallet</span></a>
+          <a href="https://docs.mantisclient.io/first-steps/getting-started" className="button"><span>Discover Mantis</span></a>
+          <a href="https://docs.mantisclient.io/first-steps/downloads" className="button"><span>Download Wallet</span></a>
         </div>
       </div>
       <div className="col flex-inner">
