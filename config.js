@@ -13,14 +13,14 @@ const config = {
     helpUrl: '',
     tweetText: '',
     social: `<li>
-		    <a href="https://twitter.com/cardano" target="_blank" rel="noopener noreferrer">
+		    <a href="https://twitter.com/mantis_io" target="_blank" rel="noopener noreferrer">
 		      <div class="btn">
 		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt='Twitter'/>
 		      </div>
 		    </a>
 		  </li>
 			<li>
-		    <a href="https://discord.gg/UjUP8nz" target="_blank" rel="noopener noreferrer">
+		    <a href="https://discord.gg/7vUyWrN33p" target="_blank" rel="noopener noreferrer">
 		      <div class="btn">
 		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt='Discord'/>
 		      </div>
