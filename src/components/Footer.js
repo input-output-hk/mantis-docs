@@ -8,8 +8,7 @@ import { Link } from 'gatsby'
 const Footer = () => (
   <footer>
     <div className="title">
-      <h1>"We're are building a beautiful and competitive roadmap for the future."</h1>
-      <p>Charles Hoskinson - CEO, IOHK</p>
+      <h1>"Helping to create a thriving ecosystem"</h1>
     </div>
     <div className="flex-grid">
       <div className="col">
@@ -55,7 +54,7 @@ const Footer = () => (
         <Link to="/resources/terms">Terms & Privacy Policy</Link>
       </div>
       <span className="align-right">
-        © {new Date().getFullYear()} All rights reserved.
+        © {new Date().getFullYear()} All rights reserved
       </span>
     </div>
   </footer>
