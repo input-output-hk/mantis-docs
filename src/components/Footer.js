@@ -9,7 +9,6 @@ const Footer = () => (
   <footer>
     <div className="title">
       <h1>"Helping to create a thriving ecosystem"</h1>
-      <p>Charles Hoskinson - CEO, IOHK</p>
     </div>
     <div className="flex-grid">
       <div className="col">
