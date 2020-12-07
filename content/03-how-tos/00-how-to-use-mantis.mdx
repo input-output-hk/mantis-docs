@@ -2,4 +2,45 @@
 title: How to use Mantis
 metaTitle: How to use Mantis
 ---
-Ipsum velit aute veniam aliquip est fugiat qui duis consequat elit tempor minim. Sint culpa reprehenderit duis esse id aliquip ipsum duis nulla ea dolore eiusmod mollit. Ex consectetur labore ullamco exercitation enim cupidatat consectetur reprehenderit irure. Do sit velit et elit aute irure labore esse esse. Ullamco minim esse laborum magna. Do amet est eu veniam anim qui.
+
+## Binaries
+
+Once [Mantis is installed](../install), you have two options to launch Mantis; using the main `mantis` binary or using the `mantis-launcher` helper script. Both are located in the `bin` folder.
+
+```
+cd mantis
+./bin/mantis
+```
+
+The `mantis-launcher` has a required argument which is the network name for Mantis to connect to.
+```
+cd mantis
+./bin/mantis-launcher <network-name>
+```
+
+## Networks
+
+To run the node, you will first need to choose a network. For this, use one of the following command-line options:
+
+* `etc`: Ethereum Classic mainnet
+* `mordor`: Mordor testnet
+* `sagano`: Mantis testnet with additional ECIP features
+
+## CLI Help 
+
+To show the basic CLI command help, use the following command.
+
+```
+cd <mantis-install-folder>
+./mantis -h
+```
+
+## Mantis Folders
+
+The Mantis client creates its main folder in your home folder, inside a its respective network name folder.
+  
+* Linux: `/home/user/.mantis/<network-name>`
+* macOS: `/User/user/.mantis/<network-name>`
+* Windows: `C:\Users\user\.mantis\<network-name>`  
+
+This is where the node's database storage, keystore, public/private keys and logs are stored.
