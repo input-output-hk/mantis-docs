@@ -16,8 +16,8 @@ Hats off to [Hasura](https://learn.hasura.io) for creating a nice easy to work w
 Get started wiuth Mantis docs, by building and running them with the following commands:
 
 ```
-$ git clone git@github.com:hasura/gatsby-gitbook-starter.git
-$ cd gatsby-gitbook-starter
+$ git clone git@github.com:input-output-hk/mantis-docs.git
+$ cd mantis-docs
 $ npm install
 $ npm start
 ```
