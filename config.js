@@ -2,7 +2,7 @@ const config = {
   gatsby: {
     pathPrefix: '/',
     siteUrl: 'https://mantis-docs-staging.netlify.app/',
-    gaTrackingId: null,
+    gaTrackingId: 'UA-119953429-4',
     trailingSlash: true,
   },
   header: {
