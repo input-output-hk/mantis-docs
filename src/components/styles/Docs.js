@@ -22,7 +22,7 @@ export const StyledHeading = styled('h1')`
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='87' viewBox='0 0 36 87'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233F9' fill-rule='nonzero'%3E%3Cpath d='M462 156.171L487.997 219 498 194.829 472.001 132z' transform='translate(-462 -132)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     position: absolute;
     display: inline-block;
-    z-index: -1;
+    z-index: -1; 
     top: -0.65rem;
     left: -0.1rem;
   }
@@ -75,9 +75,10 @@ export const StyledMainWrapper = styled.div`
   a {
     transition: color 0.15s;
     color: ${props => props.theme.colors.text};
+    text-decoration: underline;
   }
   a:hover {
-    text-decoration: underline;
+    color: #32fd98;
   }
 
   code {

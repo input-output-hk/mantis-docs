@@ -156,7 +156,7 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                     </a>
                   </li>
                   <li className='btn'>
-                    <a href="https://discord.gg/CvxPUDEm" title="Discord" rel="noopener noreferrer" target="_blank">
+                    <a href="https://discord.com/channels/776738722733490196/776741146713653248" title="Discord" rel="noopener noreferrer" target="_blank">
                       <Discord
                         size="24"
                         data-show-count="true"
