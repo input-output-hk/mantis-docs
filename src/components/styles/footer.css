@@ -156,16 +156,20 @@ footer ul li a {
   -ms-flex-item-align: auto;
   align-self: auto;
   background-size: 200% 100%;
-    background-image: linear-gradient(to right, #33FF99 50%, #37E88F 50%);
-    -webkit-transition: background-position 0.3s;
-    -moz-transition: background-position 0.3s;
-    transition: background-position 0.3s;
+  background-image: linear-gradient(to right, #33FF99 50%, #37E88F 50%);
+  -webkit-transition: background-position 0.3s;
+  -moz-transition: background-position 0.3s;
+  transition: background-position 0.3s;
+  border: #34fe98 .2rem solid;
 }
+
 .button-group .button span {
   -ms-transform: skewX(-30deg);
   -webkit-transform: skewX(-30deg);
   transform: skewX(-30deg);
   display: inline-block;
+  width: 100%;
+  font-weight: bold;
 }
 .button-group .button:hover {
   background-position: -100% -100%;
@@ -200,8 +204,17 @@ footer ul li a {
   .button-group .button {
     flex-basis: 100%;
     margin: 1rem;
+    height:100%;
   }
   footer .title h1 {
     max-width: 1000%;
   }
+}
+
+.button-group .download {
+  background:transparent;
+  border: #34fe98 .2rem solid;
+}
+.button-group .download span {
+  color: #34fe98;
 }
