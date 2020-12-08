@@ -1,0 +1,55 @@
+---
+title: Install Wallet
+metaTitle: Install Wallet
+---
+
+This section outlines how to install the Mantis wallet on your Linux/macOS/Windows machine.
+
+Follow these instructions to install the Mantis wallet or go [here for instructions to install the Mantis client](/install/install-client).
+
+
+## Requirements
+These are the prerequisites you need for installing Mantis:
+* A Java Virtual Machine (JVM) with version 1.8.x.
+    To check the JVM version use `java -version`.
+    To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
+    (Note that the client has not been tested with JVM 1.9)
+* 4G of memory (RAM)
+    Additional RAM is needed for the DAG file _if mining_ is enabled.
+* 250GB of disk space to ensure fast sync of the node. An overhead will be needed for future growth of the chain. An SSD of at least 500G is recommended for full sync.
+
+## Install
+
+To install Mantis Wallet, follow these steps:
+
+1. Download the client binary from the [Mantis Wallet releases page](https://github.com/input-output-hk/mantis-wallet/releases).
+Choose and download the respective OS from the Assets drop-down.
+
+```
+Mantis-Wallet-<version>.AppImage
+Mantis-Wallet-<version>.dmg
+Mantis-Wallet.Setup.<version>.exe
+```
+
+> Remember to run checksum verification on your downloads. Refer to [this section](first-steps/downloads#checksum) for instructions.
+
+2. Move the binary file to your preferred folder and unzip the client archive file. Finally, remove the zip file.
+
+```
+mv Mantis-Wallet-3.1.0.AppImage /home/<user>/bin/
+cd /home/<user>/bin/
+```
+
+> Default folders for applications on Linux are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the mantis folder in there.
+
+
+3. Now you can run the Wallet by double-clicking the file or by running it through your Desktop environment.
+
+
+## Update
+
+In order to update the Mantis wallet, simply replace the binary with the newer version and use run this file instead of the older one.
+
+```
+mv Mantis-Wallet-<newer-version>.AppImage /home/<user>/bin/
+```

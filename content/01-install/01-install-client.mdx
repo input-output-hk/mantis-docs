@@ -1,0 +1,77 @@
+---
+title: Install Client
+metaTitle: Install Client
+---
+
+This section outlines how to install the Mantis client on your Linux/macOS/Windows machine.
+
+Follow these instructions to install the Mantis client or go [here for instructions to install the Mantis wallet](/install/install-wallet).
+
+
+## Requirements
+
+These are the prerequisites you need for installing Mantis on Linux:
+* A Java Virtual Machine (JVM) with version 1.8.x.
+    To check the JVM version use `java -version`.
+    To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
+    (Note that the client has not been tested with JVM 1.9)
+* 4G of memory (RAM)
+    Additional RAM is needed for the DAG file _if mining_ is enabled.
+* 250GB of disk space to ensure fast sync of the node. An overhead will be needed for future growth of the chain. An SSD of at least 500G is recommended for full sync.
+
+
+## Install
+
+To install Mantis on Linux, follow these steps:
+
+1. Download the client binary zip archive from the [Mantis releases page](https://github.com/input-output-hk/mantis/releases).
+
+2. Move the zip file to your preferred folder and unzip the client archive file. Finally, remove the zip file.
+
+> Remember to run checksum verification on your downloads. Refer to [this section](first-steps/downloads#checksum) for instructions.
+
+
+```
+mv mantis-3.1.0.zip /home/<user>/bin/
+cd /home/<user>/bin/
+unzip mantis-3.1.0.zip
+rm mantis-3.1.0.zip
+```
+
+3. (Optional) Rename your mantis bin folder for ease of future updates.
+
+```
+mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
+```
+
+> Default folders for applications on Linux are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the mantis folder in there.
+
+
+4. Now you can run the client from its install folder.
+
+```
+./bin/mantis
+```
+
+This command will run the client in the foreground with settings as defined in the `conf` folder files.
+
+
+## PATH
+5. (Optional, but recommended) Add the binary to your PATH. Add the following line to your `.profile`/`.bashrc`/`.zshrc` (or equivalent). Source the profile file.
+
+```
+export PATH=$PATH:~/bin/mantis-3.1.0/bin
+source ~/.profile
+```
+
+Now you can execute the client from any folder by running `mantis`.
+
+
+## Update
+
+In order to update the Mantis client, simply replace the mantis folder with the newer version.
+
+```
+mv mantis-<newer-version>.zip /home/<user>/bin/
+unzip mantis-<newer-version>.zip /home/<user>/bin/mantis
+```
