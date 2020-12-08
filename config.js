@@ -56,7 +56,7 @@ const config = {
   siteMetadata: {
     title: 'Mantis Documentation',
     description: 'Mantis Documentation ',
-    ogImage: null,
+    ogImage: '/images/meta.jpg',
     docsLocation: 'https://github.com/input-output-hk/mantis-docs/tree/master/content',
     favicon: 'pwa-512.png',
   },
