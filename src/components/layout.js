@@ -91,7 +91,6 @@ const Wrapper = styled('div')`
       transform: skew(23deg);
       z-index: -1;
     }
-    /* background: #F8F8F8 */
   }
 
   @media only screen and (max-width: 767px) {
