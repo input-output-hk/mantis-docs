@@ -16,7 +16,6 @@ const Footer = () => (
           <img src={mantisLogo} alt="Mantis" height="51px"/>
         </div>
         <ul>
-          <li><Link to='/first-steps/downloads'>Downloads</Link></li>
           <li><Link to='/first-steps/getting-started'>Documentation</Link></li>
           <li><a href='https://www.reddit.com/r/mantisclient/' target="_blank" rel="noopener noreferrer">Reddit</a></li>
           <li><a href='https://discord.com/channels/776738722733490196/776741146713653248' target="_blank" rel="noopener noreferrer">Discord</a></li>
