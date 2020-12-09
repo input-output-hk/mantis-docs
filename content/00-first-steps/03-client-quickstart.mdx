@@ -1,0 +1,48 @@
+---
+title: "Client Quickstart"
+metaTitle: "Client Quickstart"
+metaDescription: "Client Quickstart"
+---
+
+Choose whether you'd like to use [the client](#mantisclientquickstart) or [the wallet](#mantiswalletquickstart).
+
+# Mantis Client Quickstart
+
+## Step 1: Download Mantis
+To begin, choose your OS and download the [latest release](https://github.com/input-output-hk/mantis/releases/latest).
+
+## Step 2: Run the Client Node
+The easiest way to launch the Mantis client is by using the `mantis-launcher` helper script.
+
+To run the node, you will first need to choose a network. For this, use one of the following command-line options:
+
+* `etc`: Ethereum Classic mainnet
+* `mordor`: Mordor testnet
+* `sagano`: Mantis testnet with additional ECIP features
+
+Check your client version :
+
+```
+cd <mantis-install-folder>
+./mantis -h
+```
+
+Try running the node on the Mordor testnet:
+
+```
+./bin/mantis-launcher mordor # replace with any of the above network names to connect to it
+```
+
+**Chain Synchronization** <br/>
+The launcher will start downloading blockchain data and synchronizing with the chain.
+
+
+For alternate install methods, visit the [install section](/install).
+
+# Communication and Assistance
+
+The Mantis team has two official channels for development communication:
+
+* [Mantis discord server](https://discord.gg/7vUyWrN33p)
+* [Mantis Github repository](https://github.com/input-output-hk/mantis)
+* Our [Developer Update channel on Youtube](https://www.youtube.com/watch?v=lThEZdaJygw)
