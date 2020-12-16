@@ -18,7 +18,7 @@ Once enabled, you can access the HTTP API through port 8545 over HTTP or WebSock
 You can use an example below:
 
 ```
-curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' http://localhost:8545
+curl -X POST --header 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' http://localhost:8546
 ```
 
 
