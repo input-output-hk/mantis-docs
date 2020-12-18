@@ -1,0 +1,42 @@
+---
+title: Syncing Mantis
+metaTitle: Syncing Mantis
+---
+
+# Syncing
+
+Mantis must be fully synchronized in order for it to be used, and this pertains to both the wallet and the client itself. This means each node will have to download blockchain data from other nodes using a peer-to-peer mechanism and verify the data on the chain.  
+Once this process is finished, the machine is fully synced and therefore considered a full node and may interact with the network.
+
+Mantis supports `fast-sync` and `pruning` which will help synchronize the data faster and reduce disk space on your node.
+
+While the syncing process is done using the blockchain data is stored in a [rocksdb database](https://rocksdb.org/).
+
+# Syncing Process
+
+The following is a simplified model of the syncing process:
+
+* Discovery: The process starts by checking pre-defined bootstrap node addresses for nodes that are always connected. Mantis will then try to find and build a list of peers (other nodes and clients already connected to the network).  
+* [RPLx Connections](https://github.com/ethereum/devp2p/blob/master/rlpx.md) are made to these peers using the `max peers` option.  
+* Some blacklisting is done on nodes that aren't ideal candidates to sync with.
+* Download: There are 2 main states while syncing; an initial syncing for downloading all the existing blockchain data and syncing the chain while on top of the chain.  
+* In its initial state, Mantis will download chain data from other clients.
+* Verification: While each block header and body is downloaded, these blocks are verified by replaying the transactions in them.
+* When the block number that is canonically referred to as the top of the chain is downloaded and verified, the client is fully synced.
+* Mantis will now continue to fetch and sync new blocks produced since the initial sync.
+
+To read more about the synchronization process in ethereum, [see here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md) and [here]() respectively.
+
+# Time to Sync
+
+Time to sync the mainnet can vary a lot from case to case. Machine specs, and conditions will finish a mainnet sync anywhere from 6 hours to 3 days.
+
+# 99% sync
+
+Both the wallet and the client show syncing process "stuck" at 99% for quite a while. This is completely normal and is a result of the blockchain architecture.
+
+`Synchronization: SYNCING BLOCKS 99.81%`
+
+# Improvements
+
+Syncing is constantly being worked on and in-progress for Mantis. Some of the current issues and improvements we are working on are: block fetcher, fast-sync, concurrency, latency issues, among others.
