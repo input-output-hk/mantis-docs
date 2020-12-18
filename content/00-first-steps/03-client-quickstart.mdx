@@ -39,6 +39,39 @@ The launcher will start downloading blockchain data and synchronizing with the c
 
 For alternate install methods, visit the [install section](/install).
 
+## Step 3: Confirm Mantis is running
+
+This step only works if you start your client with the [HTTP access enabled](/how-tos/querying-the-json-rpc-api).
+
+```
+curl -X POST --header 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' http://localhost:8546
+```
+
+This request will call the [`eth_syncing`](https://eth.wiki/json-rpc/API#eth_syncing) method and should return a `json` format response like the following:
+
+```
+{
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": {
+    startingBlock: '0x384',
+    currentBlock: '0x386',
+    highestBlock: '0x454'
+  }
+}
+```
+
+Or a false result when syncing is finished:
+  
+```
+{
+  "id":1,
+  "jsonrpc": "2.0",
+  "result": false
+}
+```
+
+
 # Communication and Assistance
 
 The Mantis team has two official channels for development communication:
