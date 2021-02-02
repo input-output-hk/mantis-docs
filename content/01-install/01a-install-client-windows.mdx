@@ -3,12 +3,10 @@ title: Install Client on Windows
 metaTitle: Install Client on Windows
 ---
 
-This section outlines how to install the Mantis client on your Windows machine.
-
-Follow these instructions to install the Mantis client or go [here for instructions to install the Mantis wallet](/install/install-wallet).
+Follow these instructions to install the Mantis client on your Windows machine or alternatively use [the Mantis wallet instructions](/install/install-wallet).
 
 
-## Requirements
+## Prerequisites
 
 These are the prerequisites for installing Mantis:
 * A Java Virtual Machine (JVM) with version 1.8.x.
@@ -20,16 +18,16 @@ These are the prerequisites for installing Mantis:
 * 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. An SSD of at least 500G is recommended for full sync.
 
 
-## Install
+## Installing Mantis
 
 To install Mantis, follow these steps:
 
-1. Download the client binary from the Mantis Client page at [MantisClient.io](https://mantisclient.io/):
+1. Download the client binary from the [Mantis Client page](https://mantisclient.io/):
 ![Mantis Client page](../images/1-Download-Client.png).
 
-2. Choose and download the correct installer from the Client quick-start page:
+2. Choose the Windows 64 bit installer  to download from the Client quick-start page:
 ![Windows Installer](../images/2-Download-Installer.png)
-Choose the Windows 64 bit installer, and note the checksum.
+3. Note the checksum.
 
 > Remember to run checksum verification on your downloads. Refer to [this section](/first-steps/downloads#checksum) for instructions.
 
@@ -50,7 +48,7 @@ mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
 > Default folders for applications on Linux are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the mantis folder in there.
 
 
-4. Now, you can run the client from its install folder.
+4. Now, you can run the client from its install folder, as follows:
 
 ```
 ./bin/mantis
@@ -59,8 +57,10 @@ mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
 This command runs the client in the foreground with settings as defined in the `conf` folder files.
 
 
-## PATH
-5. (Optional, but recommended) Add the binary to your PATH. Add the following line to your `.profile`/`.bashrc`/`.zshrc` (or equivalent). Source the profile file.
+## Adding the Binary to the PATH
+This is an optional step, but is recommended.
+
+5. Add the binary to your PATH by adding the following line to your `.profile`/`.bashrc`/`.zshrc` (or equivalent). Source the profile file.
 
 ```
 export PATH=$PATH:~/bin/mantis-3.1.0/bin
@@ -70,7 +70,7 @@ source ~/.profile
 Now you can execute the client from any folder by running `mantis`.
 
 
-## Update
+## Updating the Mantis Client
 
 To update the Mantis client, replace the mantis folder with the newer version.
 
