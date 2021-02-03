@@ -13,12 +13,12 @@ const Footer = () => (
     <div className="flex-grid">
       <div className="col">
         <div className="img-wrap">
-          <img src={mantisLogo} alt="Mantis" height="51px"/>
+          <img src={mantisLogo} alt="Mantis" height="51px" />
         </div>
         <ul>
           <li><Link to='/first-steps/getting-started'>Documentation</Link></li>
           <li><a href='https://www.reddit.com/r/mantisclient/' target="_blank" rel="noopener noreferrer">Reddit</a></li>
-          <li><a href='https://discord.com/channels/776738722733490196/776741146713653248' target="_blank" rel="noopener noreferrer">Discord</a></li>
+          <li><a href='https://discord.gg/7vUyWrN33p' target="_blank" rel="noopener noreferrer">Discord</a></li>
         </ul>
         <div className='button-group'>
           <a href="https://docs.mantisclient.io/first-steps/getting-started" className="button"><span>Discover Mantis</span></a>
@@ -27,9 +27,9 @@ const Footer = () => (
       </div>
       <div className="col flex-inner">
         <div className="col">
-        <div className="img-wrap">
-          <img src={iohkLogo} alt="IOHK" />
-        </div>
+          <div className="img-wrap">
+            <img src={iohkLogo} alt="IOHK" />
+          </div>
           <ul>
             <li><a href='https://iohk.io' target="_blank" rel="noopener noreferrer">iohk.io</a></li>
             <li><a href='https://iohk.io/en/contact/' target="_blank" rel="noopener noreferrer">Contact us</a></li>
@@ -38,9 +38,9 @@ const Footer = () => (
           </ul>
         </div>
         <div className="col">
-        <div className="img-wrap">
-          <img src={etcLogo} alt="Ethereum Classic" />
-        </div>
+          <div className="img-wrap">
+            <img src={etcLogo} alt="Ethereum Classic" />
+          </div>
           <ul>
             <li><a href='https://ethereumclassic.org' target="_blank" rel="noopener noreferrer">ethereumclassic.org</a></li>
             <li><a href='https://ecips.ethereumclassic.org/all' target="_blank" rel="noopener noreferrer">ECIPS</a></li>
