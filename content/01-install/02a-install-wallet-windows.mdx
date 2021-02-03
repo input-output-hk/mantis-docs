@@ -2,43 +2,44 @@
 title: Install Wallet on Windows
 metaTitle: Install Wallet on Windows
 ---
+>Author's note to reviewers: The original document describes disk space requirements for syncing and mining. I didn't think a wallet did those things. Please clarify.
 
-This section outlines how to install the Mantis wallet on your Windows machine.
+There are two Mantis applications you can use: the Mantis client and the Mantis wallet. You can download either or both.
 
-Follow these instructions to install the Mantis wallet or go [here for instructions to install the Mantis client](/install/install-client).
+This section outlines how to install the Mantis wallet on your Windows machine. For instructions to install the Mantis client, you can go [here](/install/-install-client-windows).
 
 
-## Requirements
+## Prerequisites
 
-These are the prerequisites for installing Mantis Wallet:
+These are the prerequisites for installing Mantis wallet:
 * A Java Virtual Machine (JVM) with version 1.8.x.
-    To check the JVM version, use `java -version`.
+    To check the JVM version, use
+     `java -version`.
     To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
     (Note that the Mantis team has not tested the wallet with JVM 1.9 or later versions)
 * 4G of memory (RAM)
-    Additional RAM is needed for the DAG file _if mining_ is enabled.
-* 250GB of disk space to ensure fast sync of the node. You will need more space than that for the future growth of the chain. An SSD of at least 500G is recommended for full sync.
 
-## Install
+* 250GB of disk space.
 
-To install Mantis Wallet, follow these steps:
+## Installing the wallet
 
-1. Download the wallet binary from the Mantis Wallet page at [MantisClient.io](https://mantisclient.io/):
-![Mantis Wallet page](../images/1-Download.png).
+To install Mantis wallet, follow these steps:
 
-2. Choose and download the correct installer from the Wallet quick-start page:
-![Windows Installer](../images/2-Download-Installer.png)
-Choose the Windows 64 bit installer, and note the checksum.
+1. Download the wallet binary from the Mantis wallet page at [MantisClient.io](https://mantisclient.io/):
+![Mantis wallet page](../images/1-Download.png).
 
+2. Choose and download the Windows 64 bit installer from the wallet quick-start page:
+![Windows installer](../images/2-Download-Installer.png)
+3. Note the checksum.
 > Remember to run checksum verification on your downloads. Refer to [this section](first-steps/downloads#checksum) for instructions.
 
-3. Execute the binary file to run the installer. It is a standard Windows installer.
+4. Execute the binary file to run the installer. It is a standard Windows installer.
 ![Installer Finished](../images/3-Install-Complete.png)
 
 > The default installation folder is Program Files/Mantis. We recommend placing the Mantis files there.
 
 
-4. Now, you can run the Wallet by double-clicking its executable or running it through your desktop environment. The installation process adds a shortcut to your start menu.
+5. Now, you can run the wallet by double-clicking its executable or running it through your desktop environment. The installation process adds a shortcut to your start menu.
 
 As soon as it starts, the Mantis wallet begins synchronizing with the environment you have started it in. In the image, it is started in the Sagano Testnet.
 ![setup 1](../images/4-Setup-1.png)
@@ -46,6 +47,6 @@ As soon as it starts, the Mantis wallet begins synchronizing with the environmen
 For the next steps in the story, go to the **Learn** or **How to** sections.
 
 
-## Update
+## Updating the wallet
 
 To update the Mantis wallet, download a new installer and repeat the installation process.
