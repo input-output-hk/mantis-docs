@@ -17,7 +17,7 @@ These are the prerequisites for installing Mantis Wallet:
     To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
     (Note that  the Mantis team has not tested the wallet with JVM 1.9 or later versions)
 * 4G of memory (RAM)
-* 250GB of disk space.
+* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. An SSD of at least 500GB is recommended for full sync.
 
 ##  Installing the wallet
 
@@ -33,17 +33,22 @@ Mantis-Wallet.Setup.<version>.exe
 ```
 > Remember to run checksum verification on your downloads. Refer to [this section](first-steps/downloads#checksum) for instructions.
 
-4. Move the binary file to your preferred folder and unzip the client archive file. Finally, remove the zip file.
+4. Mount the .dmg file and proceed with a standard Mac install. 
 
 ```
 mv Mantis-Wallet-3.1.0.AppImage /home/<user>/bin/
 cd /home/<user>/bin/
 ```
 
-> Default folders for applications on Linux are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the Mantis folder in there.
+> Default folders for applications on Mac are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the Mantis folder in there.
 
 
 5. Now, you can run the wallet by double-clicking the file or running it through your Desktop environment.
+
+During startup, Mantis wallet allows you to choose the network. The network is the blockchain to synchronize with. This is the splash screen:
+![splash screen](../images/5-splash-screen.png)
+
+For information on the available networks, see [this page](/how-tos/Getting-Started-with-Mantis)
 
 As soon as it starts, the Mantis wallet begins synchronizing with the environment you have started it in. In the image, it is started in the Sagano Testnet.
 ![setup 1](../images/4-Setup-1.png)

@@ -3,9 +3,26 @@ title: Getting Started with Mantis
 metaTitle: Getting Started with Mantis
 ---
 
-## Binaries
+## Networks
 
-Once [Mantis is installed](../install), you have two options to launch Mantis: using the main `mantis` binary or using the `mantis-launcher` helper script. Both files are in the `bin` folder.
+To run the node, first choose a network from this list:
+
+* `etc`: Ethereum Classic mainnet
+* `mordor`: Mordor testnet
+* `sagano`: Mantis testnet with additional ECIP features
+
+## The wallet GUI
+
+You can start the Mantis wallet through your desktop environment. 
+There is a splash screen first, where you have the opportunity to change the network name to connect to:
+![splash screen](../images/5-splash-screen.png)
+
+The initial screen looks like this:
+![Mantis wallet home](../images/4-Setup-1.png)
+
+## Launching the client from the command line
+
+Once [Mantis is installed](../install), you have two options to launch the Mantis client: using the main `mantis` binary or using the `mantis-launcher` helper script. Both files are in the `bin` folder.
 
 ```
 cd mantis
@@ -18,13 +35,6 @@ cd mantis
 ./bin/mantis-launcher <network-name>
 ```
 
-## Networks
-
-To run the node, first choose a network. For this, use one of the following command-line options:
-
-* `etc`: Ethereum Classic mainnet
-* `mordor`: Mordor testnet
-* `sagano`: Mantis testnet with additional ECIP features
 
 ## CLI Help 
 

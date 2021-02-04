@@ -2,7 +2,7 @@
 title: Install Wallet on Unix
 metaTitle: Install Wallet on Unix.
 ---
->Author's note to reviewers: The original document describes disk space requirements for syncing and mining. I didn't think a wallet did those things. Please clarify. Also please check the unix instructions; I do not have a unix machine. Linux or unix?
+>Author's note to reviewers: Please check the unix instructions; I do not have a unix machine. Linux or unix?
 
 There are two Mantis applications you can use: the Mantis client and the Mantis wallet. You can download either or both.
 
@@ -13,11 +13,12 @@ Follow these instructions to install the Mantis wallet. For instructions to inst
 
 These are the prerequisites for installing Mantis wallet:
 * A Java Virtual Machine (JVM) with version 1.8.x.
-    To check the JVM version, use `java -version`.
+    To check the JVM version, use
+     `java -version`.
     To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
     (Note that  the Mantis team has not tested the wallet with JVM 1.9 or later versions)
 * 4G of memory (RAM)
-* 250GB of disk space.
+* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. An SSD of at least 500GB is recommended for full sync.
 
 ## Installing the wallet
 
@@ -46,6 +47,11 @@ cd /home/<user>/bin/
 > Default folders for applications on Linux are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the Mantis folder in there.
 
 4. Now, you can run the wallet by double-clicking the file or running it through your Desktop environment.
+
+During startup, Mantis wallet allows you to choose the network. The network is the blockchain to synchronize with. This is the splash screen:
+![splash screen](../images/5-splash-screen.png)
+
+For information on the available networks, see [this page](/how-tos/Getting-Started-with-Mantis)
 
 As soon as it starts, the Mantis wallet begins synchronizing with the environment you have started it in. In the image, it is started in the Sagano Testnet.
 ![setup 1](../images/4-Setup-1.png)
