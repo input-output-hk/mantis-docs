@@ -23,4 +23,4 @@ There is much more to creating new features than coding. The developers welcome 
 
 ## Get in touch
 
-To discuss this in detail, contact us at info@iohk.io.
+To discuss this in detail, contact us at mantis@iohk.io.
