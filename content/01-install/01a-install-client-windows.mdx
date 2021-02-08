@@ -4,7 +4,9 @@ metaTitle: Install Client on Windows
 ---
 >Author's note to reviewers: the current general purpose instructions do not suit Windows. If the client is installable on Windows, I need someone to give me instructions. At present, it doesn't look to me like there is a Windows installer on the website.
 
-There are two Mantis applications you can use: the Mantis client and the Mantis wallet. You can download either or both.
+Before you start, the team recommends that you read [Getting Started](/first-steps/getting-started) if you haven't already. It's a 30-second read that will save you time.
+
+Mantis is both a graphical wallet and a command line client. You can download either or both.
 
 This section describes how to install the Mantis client on your Windows machine. For instructions to install the Mantis wallet, you can go [here](/install/-install-wallet-windows).
 
@@ -53,11 +55,14 @@ mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
 4. Now, you can run the client from its install folder, as follows:
 
 ```
-./bin/mantis
+./bin/mantis -<network name>
 ```
 
 This command runs the client in the foreground with settings as defined in the `conf` folder files.
 
+The client synchronizes with your chosen network as soon as it starts. The synchronization process can take several hours, depending on the network selected.
+
+For information on the available networks, see [this page](/learn/mantis-client-wallet)
 
 ## Adding the Binary to the PATH
 The Mantis team recommends adding the client folder to the system path, although it is not mandatory.

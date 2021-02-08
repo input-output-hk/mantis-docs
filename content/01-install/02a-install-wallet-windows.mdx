@@ -2,12 +2,13 @@
 title: Install Wallet on Windows
 metaTitle: Install Wallet on Windows
 ---
->Author's note to reviewers: The original document describes disk space requirements for syncing and mining. I didn't think a wallet did those things.
-Now I understand that the Mantis wallet is a full-node wallet, so it does need disk space to sync. What about mining? Please clarify.
+>Author's note to reviewers: I understand that the Mantis wallet is a full-node wallet, so it does need disk space to sync. What about mining? Please clarify.
 
-There are two Mantis applications you can use: the Mantis client and the Mantis wallet. You can download either or both.
+Before you start, the team recommends that you read [Getting Started](/first-steps/getting-started) if you haven't already. It's a 30-second read that will save you time.
 
-This section outlines how to install the Mantis wallet on your Windows machine. For instructions to install the Mantis client, you can go [here](/install/-install-client-windows).
+Mantis is both a graphical wallet and a command line client. You can download either or both.
+
+This section outlines how to install the Mantis wallet on your Windows machine. Instructions to install the Mantis client are [here](/install/-install-client-windows).
 
 
 ## Prerequisites
@@ -19,7 +20,7 @@ These are the prerequisites for installing Mantis wallet:
     To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
     (Note that the Mantis team has not tested the wallet with JVM 1.9 or later versions)
 * 4G of memory (RAM)
-
+    Additional RAM is needed for the DAG file _if mining_ is enabled.
 * 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. An SSD of at least 500GB is recommended for full sync.
 
 ## Installing the wallet
@@ -42,12 +43,12 @@ To install Mantis wallet, follow these steps:
 
 5. Now, you can run the wallet by double-clicking its executable or running it through your desktop environment. The installation process adds a shortcut to your start menu.
 
-During startup, Mantis wallet allows you to choose the network. The network is the blockchain to synchronize with. This is the splash screen:
+During startup, Mantis wallet allows you to choose the network. The network is the blockchain to synchronize. Here is the splash screen:
 ![splash screen](../images/5-splash-screen.png)
 
-For information on the available networks, see [this page](/how-tos/Getting-Started-with-Mantis)
+For information on the available networks, see [this page](/learn/mantis-client-wallet)
 
-As soon as it starts, the Mantis wallet begins synchronizing with the network you have started it in. In the image, it is started in the Sagano Testnet.
+As soon as it starts, Mantis begins synchronizing with the chosen network. In the image, Mantis is started in the Sagano Testnet.
 ![setup 1](../images/4-Setup-1.png)
 
 For the next steps in the story, go to the **Learn** or **How to** sections.

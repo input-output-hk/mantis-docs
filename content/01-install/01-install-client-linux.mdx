@@ -1,12 +1,14 @@
 ---
-title: Install Client on Unix
-metaTitle: Install Client on Unix
+title: Install Client on Linux
+metaTitle: Install Client on Linux
 ---
-> Author's note to reviewers: Please check the unix installation steps. I do not have a unix machine. Linux or unix?
+> Author's note to reviewers: Please check the Linux installation steps. I do not have a Linux machine. Linux or Unix?
 
-There are two Mantis applications you can use: the Mantis client and the Mantis wallet. You can download either or both.
+Before you start, the team recommends that you read [Getting Started](/first-steps/getting-started) if you haven't already. It's a 30-second read that will save you time.
 
-This section describes how to install the Mantis client on your Linux machine. For instructions to install the Mantis wallet, you can go [here](/install/-install-wallet-Unix).
+Mantis is both a graphical wallet and a command line client. You can download either or both.
+
+This section describes how to install the Mantis client on your Linux machine. Instructions to install the Mantis wallet are [here](/install/-install-wallet-linux).
 
 
 ## Prerequisites
@@ -52,11 +54,14 @@ mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
 5. Now, you can run the client from its install folder.
 
 ```
-./bin/mantis
+./bin/mantis -<network name>
 ```
 
 This command runs the client in the foreground with settings as defined in the `conf` folder files.
 
+The client synchronizes with your chosen network as soon as it starts. The synchronization process can take several hours, depending on the network selected.
+
+For information on the available networks, see [this page](/learn/mantis-client-wallet)
 
 ## PATH
 6. (Optional, but recommended) Add the binary to your PATH. Add the following line to your `.profile`/`.bashrc`/`.zshrc` (or equivalent). Source the profile file.
