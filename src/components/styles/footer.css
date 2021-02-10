@@ -218,3 +218,9 @@ footer ul li a {
 .button-group .download span {
   color: #34fe98;
 }
+
+@media (max-width: 767px) {
+  .button-group .download {
+      display:none;
+    }
+}
