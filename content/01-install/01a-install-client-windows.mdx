@@ -2,11 +2,9 @@
 title: Install Client on Windows
 metaTitle: Install Client on Windows
 ---
->Author's note to reviewers: the current general purpose instructions do not suit Windows. If the client is installable on Windows, I need someone to give me instructions. At present, it doesn't look to me like there is a Windows installer on the website.
-
 Before you start, the team recommends that you read [Getting Started](/first-steps/getting-started) if you haven't already. It's a 30-second read that will save you time.
 
-Mantis is both a graphical wallet and a command line client. You can download either or both.
+Mantis is both a graphical wallet and a command-line client. You can download either or both.
 
 This section describes how to install the Mantis client on your Windows machine. For instructions to install the Mantis wallet, you can go [here](/install/-install-wallet-windows).
 
@@ -19,31 +17,23 @@ These are the prerequisites for installing Mantis client:
      `java -version`.
     To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
     (Note that the Mantis team has not tested the client with JVM 1.9 or later versions)
-* 4G of memory (RAM)
+* A minimum 4GB of memory (RAM)
     Additional RAM is needed for the DAG file _if mining_ is enabled.
-* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. An SSD of at least 500G is recommended for full sync.
-
+* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. You should have an SSD of at least 500GB for full sync.
 
 ## Installing Mantis client
 
-To install the Mantis MantisClient, follow these steps:
+To install Mantis, follow these steps:
+1. Download the client binary zip archive to your preferred folder from  the [Mantis Client page](https://github.com/input-output-hk/mantis/releases/latest):
 
-1. Download the client binary from the 
-
-2. Choose the Windows 64 bit installer to download from the [Mantis Client page](https://mantisclient.io/):
-![Mantis Client page](../images/1-Download-Client.png)
-
-3. Note the checksum.
+2. Note the checksum.
 > Remember to run checksum verification on your downloads. Refer to [this section](/how-tos/how-check-hash-windows) for instructions.
 
 ```
-mv mantis-3.1.0.zip /home/<user>/bin/
-cd /home/<user>/bin/
-unzip mantis-3.1.0.zip
-rm mantis-3.1.0.zip
+
 ```
 
-3. (Optional) Rename your mantis bin folder for ease of future updates.
+3. (Optional) Rename your Mantis bin folder for ease of future updates.
 
 ```
 mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
@@ -55,7 +45,7 @@ mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
 4. Now, you can run the client from its install folder, as follows:
 
 ```
-./bin/mantis -<network name>
+./bin/mantis.bat <network name>
 ```
 
 This command runs the client in the foreground with settings as defined in the `conf` folder files.
@@ -63,15 +53,6 @@ This command runs the client in the foreground with settings as defined in the `
 The client synchronizes with your chosen network as soon as it starts. The synchronization process can take several hours, depending on the network selected.
 
 For information on the available networks, see [this page](/learn/mantis-client-wallet)
-
-## Adding the Binary to the PATH
-The Mantis team recommends adding the client folder to the system path, although it is not mandatory.
-
-5. Add the binary to the system path by updating the system environment variable PATH.
-
-
-Now you can execute the client from any folder by running `mantis`.
-
 
 ## Updating the Mantis client
 
