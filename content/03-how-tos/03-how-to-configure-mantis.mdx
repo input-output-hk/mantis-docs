@@ -95,7 +95,7 @@ You can also use a Dkey parameter on the command line:
 The discovery function is active by default. Mantis queries the network for additional potential nodes using a partial implementation of the Kademlia discovery protocol.
 
 ### Configuration file
-To prevent this and use *only* the bootstrap nodes as listed in the specific chain configuration, find the `discovery-enabled` key and set value to `false` to disable the discovery functionality:
+To prevent this and use *only* the bootstrap nodes as listed in the specific chain configuration, find the `discovery-enabled` key and set value to `false` to disable the discovery functionality:  
 `discovery-enabled = false`.
 
 ### Dkey
@@ -109,7 +109,7 @@ To prevent this and use *only* the bootstrap nodes as listed in the specific cha
 To disable this, you can:
 
 ### Configuration file
-Edit the configuration file by changing the value of the following property: `do-fast-sync` to false
+Edit the configuration file by changing the value of the following property: `do-fast-sync` to false  
 `do-fast-sync = false`
 
 ### Dkey
@@ -128,15 +128,13 @@ The default value is 'basic'.
   
 After changing this value, delete the current rocksdb file before starting the client.   
 The database is located at  
-`[Mantis datadir]/[network name]/rocksdb`
+`[Mantis datadir]/[network name]/rocksdb`  
 When you restart Mantis after deleting the database, it performs synchronization again from the beginning.
 ### In a Config File:
 ```
 mantis {
   pruning {
-    mode {
-      archive
-    }
+    mode=archive    
   }
 }
 ```

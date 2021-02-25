@@ -3,7 +3,6 @@ title: How to Contribute to the Mantis Roadmap
 metaTitle: How to contribute to the Mantis roadmap
 ---
 # How to Contribute to the Mantis Roadmap
->Author's note: I am guessing at what is required here. In particular, I need information on how people can contribute and the process for initiating a discussion between a prospective contributor and the team. What information should they provide about themselves?
 
 ## Introduction
 

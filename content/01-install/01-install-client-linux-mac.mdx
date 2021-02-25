@@ -13,8 +13,8 @@ This section describes how to install the Mantis client on your Linux or Apple M
 
 These are the prerequisites for installing Mantis client:
 * A Java Virtual Machine (JVM) with version 1.8.x.
-    To check the JVM version, use
-     `java -version`.
+    To check the JVM version, use  
+     `java -version`.  
     To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
     (Note that  the Mantis team has not tested the client with JVM 1.9 or later versions)
 * A minimum of 4GB of memory (RAM)
@@ -25,7 +25,7 @@ These are the prerequisites for installing Mantis client:
 ## Installing Mantis client
 
 To install Mantis, follow these steps:
-1. Download the client binary zip archive from  the [Mantis Client page](https://github.com/input-output-hk/mantis/releases/latest):
+1. Download the client binary zip archive from  the [Mantis Client page](https://github.com/input-output-hk/mantis/releases/latest).
 
 
 2. Note the checksum.
@@ -52,10 +52,10 @@ mv /home/<user>/bin/mantis-3.2.1/home/<user>/bin/mantis
 5. Now, you can run the client from its install folder.
 
 ```
-bin/mantis-launcher <network name>
+bin/mantis-launcher <network-name>
 ```
 
-This command runs the client in the foreground with settings as defined in the `conf` folder files.
+This command runs the client in the foreground with settings defined in the `<network-name>.conf` file in the `conf` folder under the Mantis base folder.
 
 The client synchronizes with your chosen network as soon as it starts. The synchronization process can take several hours, depending on the network selected.
 
