@@ -27,9 +27,9 @@ The launcher starts Mantis with configuration information obtained by loading `[
 The conf subdirectory contains a standard configuration file for each of the common networks such as `etc.conf, eth.conf,` and `mordor.conf`.
 
 ## Creating a custom configuration file
-To create a custom configuration file, follow these steps:
+To create a custom configuration file called [your-name].conf, follow these steps:
 1. In base.conf, find the key that you need to modify
-2. Create a new file called [your name].conf
+2. Create a new file and call it [your-name].conf
 3. Copy the contents of the configuration file you are currently using
 4. Add the key and value from base.conf to your file. Make sure you include all the relevant higher-level key names and surrounding braces like this:
 ```
@@ -56,17 +56,17 @@ mantis {
 5. Start Mantis with this command:
 ```
 cd ~/mantis-3.0
-./mantis-launcher [your name]
+./mantis-launcher [your-name]
 ``` 
 
 ## Using the Dkey
 To change configuration options at startup on the command line, you can use Dkey arguments to define the key and value as follows:
 
 ```
-./mantis-launcher [config name] -D[key name]=[value]
+./mantis-launcher [config-name] -D[key-name]=[value]
 ```
 
-Replace `[config-name]` with your configuration file name, [key name] with the name of the key, and [value] with the new value.
+Replace `[config-name]` with a configuration file name, [key-name] with the name of the key, and [value] with the new value.
 
 Prefix the key name with all the higher-level key names as defined in base.conf, like this:  
 `-Dmantis.network.port='9076'`
@@ -119,16 +119,27 @@ Edit the configuration file by changing the value of the following property: `do
 
 ## Pruning
 Pruning is the process of deciding which blocks are not part of the main chain and not storing them.   
-You can control this with these three values of the pruning key:  
+You can control this with these three values of the pruning key mantis.pruning.mode:  
 -archive:  Mantis does no pruning  
 -basic:    reference count based pruning  
 -inmemory: reference count inmemory pruning  
+
+The default value is 'basic'.
   
 After changing this value, delete the current rocksdb file before starting the client.   
 The database is located at  
 `[Mantis datadir]/[network name]/rocksdb`
 When you restart Mantis after deleting the database, it performs synchronization again from the beginning.
-
+### In a Config File:
+```
+mantis {
+  pruning {
+    mode {
+      archive
+    }
+  }
+}
+```
 
 ### Dkey
 ```

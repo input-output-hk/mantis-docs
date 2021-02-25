@@ -2,12 +2,9 @@
 title: Install Wallet on Apple Mac
 metaTitle: Install Wallet on Apple Mac
 ---
-
->Author's note to reviewers: Please check the Mac instructions; I do not have a Mac machine. 
-
 Before you start, the team recommends that you read [Getting Started](/first-steps/getting-started) if you haven't already. It's a 30-second read that will save you time.
 
-Mantis is both a graphical wallet and a command line client. You can download either or both.
+Mantis is both a graphical wallet and a command-line client. You can download either or both.
 
 This section outlines how to install the Mantis wallet on your Apple Mac machine. Instructions to install the Mantis client are [here](/install/install-client-mac).
 
@@ -18,9 +15,9 @@ These are the prerequisites for installing Mantis Wallet:
     To check the JVM version, use `java -version`.
     To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
     (Note that  the Mantis team has not tested the wallet with JVM 1.9 or later versions)
-* 4G of memory (RAM)
+* A minimum of 4GB of memory (RAM)
     Additional RAM is needed for the DAG file _if mining_ is enabled.
-* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. An SSD of at least 500GB is recommended for full sync.
+* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. You should have an SSD of at least 500GB for full sync.
 
 ##  Installing the wallet
 
@@ -30,21 +27,19 @@ To install Mantis wallet, follow these steps:
 ![Apple Mac Installer](../images/2c-Download-Installer.png)
 Note the checksum.
 ```
-Mantis-Wallet-<version>.AppImage
 Mantis-Wallet-<version>.dmg
-Mantis-Wallet.Setup.<version>.exe
 ```
 > Remember to run checksum verification on your downloads. Refer to [this section](/how-tos/how-check-hash-mac) for instructions.
 
-4. Mount the .dmg file and proceed with a standard Mac install. 
+4. Open (mount) the .dmg file and proceed with a standard Mac install. 
 
 ```
 mv Mantis-Wallet-3.1.0.AppImage /home/<user>/bin/
 cd /home/<user>/bin/
 ```
-
-> Default folders for applications on Mac are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the Mantis folder in there.
-
+After mounting the dmg file, drag the 'Mantis-Wallet' icon to the 'Applications' shortcut in the same window. You can unmount it later.
+![Mac Install](../images/3c-Install-Mac.png)
+>We recommend placing the Mantis folder in the default folders provided during install.
 
 5. Now, you can run the wallet by double-clicking the file or running it through your Desktop environment.
 

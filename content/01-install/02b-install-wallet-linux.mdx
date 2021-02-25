@@ -1,14 +1,12 @@
 ---
-title: Install Wallet on Unix
-metaTitle: Install Wallet on Unix.
+title: Install Wallet on Linux
+metaTitle: Install Wallet on Linux.
 ---
->Author's note to reviewers: Please check the unix instructions; I do not have a unix machine. Linux or unix?
-
 Before you start, the team recommends that you read [Getting Started](/first-steps/getting-started) if you haven't already. It's a 30-second read that will save you time.
 
-Mantis is both a graphical wallet and a command line client. You can download either or both.
+Mantis is both a graphical wallet and a command-line client. You can download either or both.
 
-Follow these instructions to install the Mantis wallet. Instructions to install the Mantis client are [here](/install/install-client-unix).
+Follow these instructions to install the Mantis wallet. Instructions to install the Mantis client are [here](/install/install-client-linux-mac).
 
 
 ## Prerequisites
@@ -21,7 +19,7 @@ These are the prerequisites for installing Mantis wallet:
     (Note that  the Mantis team has not tested the wallet with JVM 1.9 or later versions)
 * 4G of memory (RAM)
     Additional RAM is needed for the DAG file _if mining_ is enabled.
-* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. An SSD of at least 500GB is recommended for full sync.
+* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. You should have an SSD of at least 500GB for full sync.
 
 ## Installing the wallet
 
@@ -34,22 +32,13 @@ Choose and download the Linux installer from the wallet quick-start page:
 
 ```
 Mantis-Wallet-<version>.AppImage
-Mantis-Wallet-<version>.dmg
-Mantis-Wallet.Setup.<version>.exe
 ```
 2. Note the checksum.
 > Remember to run checksum verification on your downloads. Refer to [this section](/how-tos/how-check-hash-linux) for instructions.
 
-3. Move the binary file to your preferred folder and unzip the client archive file. Finally, remove the zip file.
+3. For information on where to place the AppImage file, see [here](https://docs.appimage.org/user-guide/faq.html#question-where-do-i-store-my-appimages)
 
-```
-mv Mantis-Wallet-3.1.0.AppImage /home/<user>/bin/
-cd /home/<user>/bin/
-```
-
-> Default folders for applications on Linux are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the Mantis folder in there.
-
-4. Now, you can run the wallet by double-clicking the file or running it through your Desktop environment.
+4. Now, you can run the wallet by double-clicking the AppImage file or running it through your Desktop environment.
 
 During startup, Mantis wallet allows you to choose the network. The network is the blockchain to synchronize. Here is the splash screen:
 ![splash screen](../images/5-splash-screen.png)

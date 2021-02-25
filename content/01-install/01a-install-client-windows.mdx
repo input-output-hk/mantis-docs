@@ -29,26 +29,16 @@ To install Mantis, follow these steps:
 2. Note the checksum.
 > Remember to run checksum verification on your downloads. Refer to [this section](/how-tos/how-check-hash-windows) for instructions.
 
-```
-
-```
-
 3. (Optional) Rename your Mantis bin folder for ease of future updates.
-
-```
-mv /home/<user>/bin/mantis-3.1.0 /home/<user>/bin/mantis
-```
-
-> Default folders for applications on Linux are `/home/<user>/Applications` and `/home/<user>/bin`, or `/usr/local/bin`. We recommend placing the mantis folder in there.
-
 
 4. Now, you can run the client from its install folder, as follows:
 
 ```
-./bin/mantis.bat <network name>
+cd <Mantis Folder>/bin
+mantis-launcher.bat <Network Name>
 ```
 
-This command runs the client in the foreground with settings as defined in the `conf` folder files.
+This command runs the client in the foreground with settings as defined in the `<Network Name>.conf` file in the `conf` folder.
 
 The client synchronizes with your chosen network as soon as it starts. The synchronization process can take several hours, depending on the network selected.
 
