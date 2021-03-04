@@ -145,26 +145,26 @@ const Header = ({ location, theme, isDarkThemeActive, toggleActiveTheme }) => (
                     </a>
                   </li>
                 ) : null}
-                  <li className='btn'>
-                    <a href="https://twitter.com/mantis_io" title="Twitter" rel="noopener noreferrer" target="_blank">
-                      <Twitter
-                        size="24"
-                        data-show-count="true"
-                        aria-label="Twitter"
-                      >
-                      </Twitter>
-                    </a>
-                  </li>
-                  <li className='btn'>
-                    <a href="https://discord.com/channels/776738722733490196/776741146713653248" title="Discord" rel="noopener noreferrer" target="_blank">
-                      <Discord
-                        size="24"
-                        data-show-count="true"
-                        aria-label="Discord"
-                      >
-                      </Discord>
-                    </a>
-                  </li>
+                <li className='btn'>
+                  <a href="https://twitter.com/mantis_io" title="Twitter" rel="noopener noreferrer" target="_blank">
+                    <Twitter
+                      size="24"
+                      data-show-count="true"
+                      aria-label="Twitter"
+                    >
+                    </Twitter>
+                  </a>
+                </li>
+                <li className='btn'>
+                  <a href="https://discord.gg/7vUyWrN33p" title="Discord" rel="noopener noreferrer" target="_blank">
+                    <Discord
+                      size="24"
+                      data-show-count="true"
+                      aria-label="Discord"
+                    >
+                    </Discord>
+                  </a>
+                </li>
                 {githubUrl !== '' ? (
                   <li className='btn'>
                     <a href={githubUrl} title="GitHub" rel="noopener noreferrer" target="_blank">
