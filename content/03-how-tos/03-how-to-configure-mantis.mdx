@@ -11,9 +11,10 @@ The Mantis client is flexible, and you have a choice of two methods for controll
 
 ## Standard configuration files
 Whatever your platform, the installation places all the standard configuration files in the `conf` subdirectory of the Mantis root folder.
-A full list of the available keys, with a description and a default value for each, is in `[Mantis root]/conf/base.conf`.
+A full list of the available keys, with a description and a default value for each, is in `[Mantis root]/conf/base.conf` and in files it includes. 
+The configuration syntax used is [HOCON](https://github.com/lightbend/config/blob/master/HOCON.md).
 
-Do not modify the standard configuration files because a new version of Mantis will overwrite your modifications.
+Do not modify the standard configuration files because installing a new version of Mantis will overwrite your modifications.
 
 ## Starting Mantis
 To run Mantis, navigate to the Mantis binaries root folder and launch with this command:
@@ -146,7 +147,7 @@ mantis {
 
 ## HTTP RPC
 Mantis supports all standard web3 JSON-RPC APIs.
-To enable the HTTP server,
+To enable the HTTP server, change the startup parameters like this:
 
 ### Dkey
 ```

@@ -5,7 +5,7 @@ metaTitle: Checkpointing
 
 The purpose of the checkpointing system is to provide the Ethereum Classic blockchain with 51% attack resistance,
 giving protection to the chain and confidence to its users that the system is secure.
-> Note: 51% attacks occur when some miners (more than 50% of the network's miners) collude to cause network disruption.
+> Note: 51% attacks occur when some miners (comprising more than 50% of the network's mining hash rate) collude to cause network disruption.
 
 ## Motivation
 
@@ -17,7 +17,7 @@ This solution is a temporary measure, and as soon as there are enough network pa
 
 The blockchain's headers contain an additional value indicating a checkpointed position. The checkpointing federation validates this checkpoint position. The checkpoint indicates that the chain has been proven correct up to that point.
 
-As a user, you know that a transaction is safe if it is on the chain at or before the block with the checkpoint.
+As a user, you know that a transaction is safe if it is on the chain in the block with the checkpoint or in one of its ancestors.
 
 The underlying technology used to coordinate the issuing of checkpoints is a variant of the Byzantine fault tolerant consensus protocol, the [Ouroboros BFT](https://eprint.iacr.org/2018/1049.pdf).
 
