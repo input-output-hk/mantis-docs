@@ -12,7 +12,7 @@ Mantis supports `fast-sync` and `pruning` which help synchronize the data faster
 While the syncing process is done using the blockchain, data is stored in a [rocksdb database](https://rocksdb.org/).
 
 # Syncing Process
-The following is a simplified model of the syncing process:
+The following is a brief description of the syncing process:
 
 * Discovery: The process starts by checking pre-defined bootstrap node addresses for nodes that are always connected. Mantis then tries to find and build a list of peers (other nodes and clients already connected to the network).  
 * [RPLx Connections](https://github.com/ethereum/devp2p/blob/master/rlpx.md) are made to these peers using the `max peers` option.  
@@ -23,7 +23,7 @@ The following is a simplified model of the syncing process:
 * When the block number that is canonically referred to as the top of the chain is downloaded and verified, the client is fully synced.
 * Mantis then continues to fetch and sync new blocks produced since the initial sync.
 
-To read more about the synchronization process in Ethereum, [see here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md).
+To read more about the synchronization process in Ethereum, [refer to the Ethereum documentation](https://github.com/ethereum/devp2p/blob/master/caps/eth.md).
 
 # Time to Synchronize
 The time to synchronize the mainnet can vary widely from case to case. Machine specs, and conditions mean a mainnet sync can take anywhere from 6 hours to 3 days.
@@ -33,8 +33,7 @@ The time to synchronize the mainnet can vary widely from case to case. Machine s
 
 Both the wallet and the client show syncing process "stuck" at 99% for quite a while. This is completely normal and is a result of the blockchain architecture.
 
-
-The only solution to this is to wait and let the client sync. The Mantis team is working on performance optimizations and UI improvements to better communicate this situation.
+The only solution to this is to wait and let the client sync. The Mantis team is working on performance optimizations and UI improvements to better deal with this situation.
 
 # Improvements
-Syncing is constantly being worked on and in-progress for Mantis. Some of the current issues and improvements we are working on are: block fetcher, fast-sync, concurrency, latency issues, among others.
+Syncing is constantly being worked on and in-progress for Mantis. Some of the current issues and improvements we are working on include block fetcher, fast-sync, concurrency, and latency issues.
