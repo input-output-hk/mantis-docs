@@ -1,0 +1,49 @@
+---
+title: Install Client on Windows
+metaTitle: Install Client on Windows
+---
+Before you start, the team recommends that you read [Getting Started](/first-steps/getting-started) if you haven't already. It's a 30-second read that will save you time.
+
+Mantis is both a graphical wallet and a command-line client. You can download either or both.
+
+This section describes how to install the Mantis client on your Windows machine. If you want the wallet, follow the [wallet installation instructions](/install/-install-wallet-windows).
+
+
+## Prerequisites
+
+These are the prerequisites for installing Mantis client:
+* A Java Virtual Machine (JVM) with version 1.8.x.
+    To check the JVM version, use  
+     `java -version`.  
+    To install Java, follow [these instructions](https://java.com/en/download/help/download_options.html).
+    (Note that the Mantis team has not tested the client with JVM 1.9 or later versions)
+* A minimum 4GB of memory (RAM)
+    Additional RAM is needed for the DAG file _if mining_ is enabled.
+* 250GB of disk space to ensure fast sync of the node. You will need more than that for the future growth of the chain. You should have an SSD of at least 500GB for full sync.
+
+## Installing Mantis client
+
+To install Mantis, follow these steps:
+1. Download the client binary zip archive to your preferred folder from the [Mantis Client page](https://github.com/input-output-hk/mantis/releases/latest).
+
+2. Note the checksum.
+> Remember to run checksum verification on your downloads. Refer to [this section](/how-tos/how-check-hash-windows) for instructions.
+
+3. (Optional) Rename your Mantis bin folder for ease of future updates.
+
+4. Now, you can run the client from its install folder, as follows:
+
+```
+cd <Mantis-Folder>/bin
+mantis-launcher.bat <Network-Name>
+```
+
+This command runs the client in the foreground with settings as defined in the `<Network-Name>.conf` file in the `conf` folder.
+
+The client synchronizes with your chosen network as soon as it starts. The synchronization process can take several hours, depending on the network selected.
+
+For information on the available networks, see [this page](/learn/mantis-client-wallet)
+
+## Updating the Mantis client
+
+To update the Mantis client, download a new installer and repeat the installation process.
