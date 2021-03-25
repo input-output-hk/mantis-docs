@@ -3,22 +3,20 @@ title: Mantis Client / Wallet
 metaTitle: Mantis Client / Wallet
 ---
 
+
 # Client and Wallet
 
-Mantis is the node’s *client and a wallet*. You can download them separately and use any according to your needs. These are delivered and released separately and each has its own installation and configuration options.
-The client is a CLI tool made for advanced users and node maintainers, and the wallet has an easy-to-use GUI interface for cryptocurrency management and visualization of networks.
+Mantis is a full-featured *client and a wallet*. You can download and use either according to your needs. They are delivered and released separately, and each has specific installation and configuration options.
+Installation materials are available for Linux, macOS, and Windows.
 
+The wallet runs a Mantis client behind the scenes, and the client synchronizes with your chosen network as soon as it starts. The synchronization process can take several hours, depending on the network selected and the performance of your local machine, especially its disk speed.
 
-## Node Client
-The Mantis client is a full node command-line tool built in Scala. It is compatible with the Ethereum Classic mainnet, the mordor testnet, as well as with other proof-of-work (PoW) Ethereum-like networks.
+Mantis is compatible with the Ethereum Classic mainnet, the Mordor testnet, and other proof-of-work (PoW) Ethereum-like networks, including Sagano.
 
-Additionally, the Mantis team has implemented Sagano testnet features into its core and therefore, Mantis can be used in order to navigate the network and its features such as Checkpointing and/or the Proto-Treasury system.
+For development, Mantis integrates particularly well with the Sagano testnet. The Sagano testnet includes Ethereum Classic Improvement Proposals (ECIPs) covering such features as Checkpointing and the Proto-Treasury system.
 
-To get started using the client, follow [this link](/first-steps/client-quickstart).
+## Client 
+The Mantis client is a full node command-line tool, built with Scala and made for advanced users and node maintainers.  
 
 ## Wallet
-
-The Mantis wallet is a graphical interface wallet that can interact with the Ethereum Classic network. You can send and receive transactions, create or restore Ethereum accounts, and view balances. Since the wallet incorporates and runs its own backend built on Mantis, it is fully autonomous and doesn't require an additional instance of Mantis running alongside. The wallet is compatible with and can be tested on Linux, macOS, and Windows.
-
-
-To download and start using the wallet, follow [this link](/first-steps/wallet-quickstart).
+The Mantis wallet is a graphical interface wallet. You can send and receive transactions, create or restore Ethereum accounts, and view balances. The wallet runs the client as a background task. 
