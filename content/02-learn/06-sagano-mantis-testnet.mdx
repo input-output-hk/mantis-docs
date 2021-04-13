@@ -3,23 +3,39 @@ title: "Sagano: Mantis testnet"
 metaTitle: "Sagano: Mantis testnet"
 ---
 
-Mantis is in the final stages of internal testing for a fully implemented 'Sagano' testnet, which will be publicly available externally in the coming weeks. This testnet highlights Mantis' and IOG's commitment to push innovation within the ETC ecosystem.
+The Sagano testnet is a safe environment provided by the Mantis team to allow developers to  
+ - Deploy and test their smart contracts
+ - Test IOHK Ethereum Classic Improvment Proposals (ECIPs) when they are deployed  
+ It also allows wallet users to interact with test ETC tokens obtained from a faucet.
 
-The two initial features the Sagano testnet will feature are [Checkpointing](#) and [Proto-Treasury](#).
+ All new ETC features from the Input Output Group will be deployed first on the Sagano network.
 
-[Contact us](mailto:mantis@iohk.io) for further information on how to participate and join the testnet.
+To join Sagano with Mantis, use the `sagano` network definition:
 
-## Sagano Faucet & Explorer
+```
+./bin/mantis-launcher sagano
+```
+If you are using the wallet, you can also select the Sagano network from the splash screen on startup. After startup, you can change the network from the Settings menu.  
 
-The Sagano Faucet and Explorer are key tools needed to use the Sagano testnet correctly.
+The Sagano Faucet and Explorer are vital tools needed to use the Sagano testnet correctly.
 
-If you are interested, read [How to join the Sagano testnet](/how-tos/how-to-join-the-sagano-testnet).
+## Sagano Faucet
 
+[Sagano Faucet](https://mantis-testnet-faucet-web.mantis.ws/) 
+The Sagano Faucet supplies test ETC to make it easy for developers and users to run transactions in test mode.  
+To obtain a coin, you provide your testnet address.   
+You can claim a maximum of one coin every 24 hours.  
+The test ETC has no value; no one can spend coins dispensed by the faucet on any network other than Sagano.  
 
-## Sagano Roadmap
+## Sagano Explorer
 
-Future testnet releases look to support the evolution of Ethererum Classic. Some protocol improvements to be explored and proposed include:
-  - [Sha-3-256](https://ecips.ethereumclassic.org/ECIPs/ecip-1049)
-  - [KEVM](https://runtimeverification.com/formal-design-and-modeling/#virtual-machines-kevm-iele) + [Firefly](https://runtimeverification.com/firefly/)
-  - [NiPoPoWs](https://nipopows.com/) ([publication](https://eprint.iacr.org/2017/963.pdf))
-  - [Coded Merkle Trees](https://eprint.iacr.org/2019/1139.pdf)
+[Sagano Explorer](https://mantis-testnet-explorer.mantis.ws/)  
+This lightweight, browser-based explorer allows users to monitor activity on the testnet. The explorer shows detailed transaction activity as well as labeling which blocks are checkpointing blocks.  
+To use it, click on the link above and save the address in your browser.
+![Sagano Explorer Output](../images/13-sagano-explorer.png)
+
+Future testnet releases look to support the evolution of  Ethereum Classic.
+## Joining as a Miner
+
+Pull Requests will be reviewed and accepted to join Sagano as a Miner.
+
