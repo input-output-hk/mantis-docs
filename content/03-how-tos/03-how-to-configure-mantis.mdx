@@ -7,7 +7,7 @@ metaTitle: How to configure the Mantis client
 The Mantis client is flexible, and you have a choice of two methods for controlling it:
 
  - Create a custom config file
- - Configure at start-up with command-line arguments using -D flags (Dkey).
+ - Configure at startup with command-line arguments using -D flags (Dkey)
 
 ## Standard configuration files
 Whatever your platform, the installation places all the standard configuration files in the `conf` subdirectory of the Mantis root folder.
@@ -17,7 +17,7 @@ The configuration syntax used is [HOCON](https://github.com/lightbend/config/blo
 Do not modify the standard configuration files because installing a new version of Mantis will overwrite your modifications.
 
 ## Starting Mantis
-To run Mantis, go to the Mantis binaries root folder and launch with this command:
+To run Mantis, navigate to the Mantis binaries root folder and launch with this command:
 
 ```
 cd ~/mantis-3.0
@@ -73,8 +73,8 @@ Prefix the key name with all the higher-level key names as defined in base.conf,
 `-Dmantis.network.port='9076'`
 
 # Additional notes
-## Data directory
-By default, Mantis stores the blockchain data, logs, keystore, and other files it creates in the user’s home folder under a subfolder called `.mantis`. Each network has a separate subfolder, that is `/.mantis/etc` for the Ethereum Classic mainnet, `/.mantis/mordor` for the Mordor testnet, and `/.mantis/sagano` for the Sagano testnet.
+## Data Directory
+By default, Mantis stores the blockchain data, logs, keystore, and other files it creates in the user’s home folder under a subfolder called `.mantis`. Each network has a separate subfolder, that is `/.mantis/etc` for the Ethereum Classic mainnet, `/.mantis/mordor` for the Mordor testnet, or `/.mantis/sagano` for the Sagano testnet.
 
 In the configuration files, you can add or change a mantis.datadir option as follows:
 
@@ -90,26 +90,30 @@ You can also use a Dkey parameter on the command line:
 -Dmantis.datadir=/new/datadir/location
 ```
 
-> Note: you cannot use the `~` shortcut to define the new location.
+> Note: You cannot use the `~` shortcut to define the new location.
 
 ## Discovery
 The discovery function is active by default. Mantis queries the network for additional potential nodes using a partial implementation of the Kademlia discovery protocol.
 
-To disable discovery using a configuration file and use *only* the bootstrap nodes as listed in the specific chain configuration, find the `discovery-enabled` key and set value to `false` :  
+### Configuration file
+To prevent this and use *only* the bootstrap nodes as listed in the specific chain configuration, find the `discovery-enabled` key and set value to `false` to disable the discovery functionality:  
 `discovery-enabled = false`.
 
-To disable discovery using a Dkey, use a parameter like this:
+### Dkey
 ```
--Dmantis.network.discovery.discovery-enabled=false
+-Dmantis.network.discovery.discovery-enabled=true
 ```
 
 ## Fast sync
 `Fast sync` can synchronize your local blockchain data faster than a full (or archival) sync. Mantis downloads all blocks and only verifies the proof of work of each block instead of downloading and reprocessing every transaction from genesis.
 
-To disable fast sync using a configuration file, change the value of the property: `do-fast-sync` to false  
+To disable this, you can:
+
+### Configuration file
+Edit the configuration file by changing the value of the following property: `do-fast-sync` to false  
 `do-fast-sync = false`
 
-To do the same using a Dkey, use a parameter like this:
+### Dkey
 ```
 -Dmantis.sync.do-fast-sync=false # to run without fast-sync
 ```
@@ -118,8 +122,8 @@ To do the same using a Dkey, use a parameter like this:
 Pruning is the process of deciding which blocks are not part of the main chain and not storing them.   
 You can control this with these three values of the pruning key mantis.pruning.mode:  
 -archive:  Mantis does no pruning  
--basic:    pruning based on reference count  
--inmemory: reference count in-memory pruning.   
+-basic:    reference count based pruning  
+-inmemory: reference count inmemory pruning  
 
 The default value is 'basic'.
   
@@ -127,7 +131,7 @@ After changing this value, delete the current rocksdb file before starting the c
 The database is located at  
 `[Mantis datadir]/[network name]/rocksdb`  
 When you restart Mantis after deleting the database, it performs synchronization again from the beginning.
-In a configuration file, the change looks like this:
+### In a Config File:
 ```
 mantis {
   pruning {
@@ -136,15 +140,16 @@ mantis {
 }
 ```
 
-To do the same thing with a Dkey, use a parameter like this:
+### Dkey
 ```
 -Dmantis.pruning.mode=archive
 ```
 
-## HTTP remote procedure call
-Mantis supports all standard Web3 JSON-RPC APIs.
-To enable the HTTP server, change the start-up parameters using Dkeys like this:
+## HTTP RPC
+Mantis supports all standard web3 JSON-RPC APIs.
+To enable the HTTP server, change the startup parameters like this:
 
+### Dkey
 ```
 -Dmantis.network.rpc.http.enabled=true
 -Dmantis.network.rpc.http.mode=http
