@@ -48,8 +48,8 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div class="bottom-text">
-      <div class="bottom-links">
+    <div className="bottom-text">
+      <div className="bottom-links">
         <Link to="/resources/terms">Terms & Privacy Policy</Link>
       </div>
       <span className="align-right">
