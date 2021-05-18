@@ -6,8 +6,7 @@ metaTitle: Known Issues
 
 ## Client Issues
 
-* users might need to configure port forwarding manually for all TCP and UDP traffic, otherwise there might be problems with initial syncing
-* when using `pruning`, there's a risk of losing MPT nodes which may block the syncing process
+* If an RPC request involving the “latest block” is underway at the exact same time a new block is imported, the request may fail.
 
 ## Wallet Issues
 
