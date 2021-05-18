@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import config from '../../../config';
 import TreeNode from './treeNode';
 import stripNumbers from '../../utils/stripNumbersFromPath'
@@ -216,6 +216,20 @@ const Tree = ({ edges }) => {
   useEffect(() => {
     const path = window.location.pathname
     console.log('path', path)
+    const processItems = items =>
+      items.forEach(item => {
+        const strippedUrl = stripNumbers(item.url)
+
+        if (path.includes(strippedUrl) && path !== strippedUrl)
+          setCollapsed({
+            ...collapsed,
+            [strippedUrl]: false,
+          })
+
+        if (item.items?.length) processItems(item.items)
+      })
+
+    processItems(treeData.items)
   }, [])
 
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
