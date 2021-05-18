@@ -213,6 +213,11 @@ const Tree = ({ edges }) => {
     // }
   });
 
+  useEffect(() => {
+    const path = window.location.pathname
+    console.log('path', path)
+  }, [])
+
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
 
   const toggle = url => {
