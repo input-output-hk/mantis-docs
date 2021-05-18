@@ -215,7 +215,6 @@ const Tree = ({ edges }) => {
 
   useEffect(() => {
     const path = window.location.pathname
-    console.log('path', path)
     const processItems = items =>
       items.forEach(item => {
         const strippedUrl = stripNumbers(item.url)
