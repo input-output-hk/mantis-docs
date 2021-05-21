@@ -26,7 +26,7 @@ These are the prerequisites for installing Mantis wallet:
 To install Mantis wallet, follow these steps:
 
 1. Download the wallet binary from the [wallet releases page](https://github.com/input-output-hk/mantis-wallet/releases/latest).
-Choose and download the Linux installer from the wallet releases page.
+Choose and download the Linux installer from the wallet releases page. The Linux installer is the one with the AppImage extension.
 
 ```
 Mantis-Wallet-<version>.AppImage
@@ -34,11 +34,14 @@ Mantis-Wallet-<version>.AppImage
 2. Note the checksum.
 > Remember to run checksum verification on your downloads. Refer to [this section](/how-tos/how-check-hash-linux) for instructions.
 
-3. For more information, see [where to place the AppImage file](https://docs.appimage.org/user-guide/faq.html#question-where-do-i-store-my-appimages). The Linux installer is the one with the .AppImage extension.
+3. For more information, see [where to place the AppImage file](https://docs.appimage.org/user-guide/faq.html#question-where-do-i-store-my-appimages). 
 
 4. Mark the Appimage file executable:
 ![Linux screenshot](../images/2c-Linux-Mark-Executable.png)
 5. Now, you can run the wallet by double-clicking the AppImage file or running it through your Desktop environment.
+
+> On recent Debian distributions, every time you run the AppImage file you need to add the no-sandbox switch like this: `./mantis.appimage --no-sandbox`  
+For more information, see [this Reddit discussion](https://www.reddit.com/r/debian/comments/hkyeft/unable_to_run_appimage_applications_without/) 
 
 During startup, Mantis wallet allows you to choose the network. The network is the blockchain to synchronize. Here is the splash screen:
 ![splash screen](../images/5-splash-screen.png)
