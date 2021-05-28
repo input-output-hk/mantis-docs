@@ -26,8 +26,8 @@ To read more about the synchronization process in Ethereum, [refer to the Ethere
 
 # Fast sync   
 Fast sync is a technique used to speed up the initial synchronization of the local node with the Ethereum Classic blockchain.  
-First, a pivot block is selected. The pivot block is a block number near the top of the chain, old enough to be safe from [chain reorganizations](https://blog.ethereum.org/2015/08/08/chain-reorganisation-depth-expectations/).  
-Fast sync will download only the headers of blocks from the first (genesis) block to the pivot block, then switch to normal full sync, where each block is downloaded and validated.
+First, a pivot block is selected. The pivot block is a block number near the top of the chain, old enough to be safe from [chain reorganizations](https://blog.ethereum.org/2015/08/08/chain-reorganisation-depth-expectations/).   
+Fast sync will download only the headers of blocks from the first (genesis) block to the pivot block, then switch to normal full sync, where each block is downloaded and validated.  
 Fast sync is configurable and enabled by default. See the [configuration page](/how-tos/how-to-configure-mantis) for more information.
 
 # Time to Synchronize
