@@ -6,12 +6,16 @@ metaTitle: How to use the Web3.js interface with Mantis client
 
 
 # Introduction  
-Learn how to use the Web3 Javascript interface with the Mantis client.  
-Walk through an example program that demonstrates some sample API calls.
+Learn how to use the web3 Javascript interface with the Mantis client.  
+Walk through an example program that demonstrates some sample API calls.  
+  
+The Ethereum web3.js interface provides many documented API calls. You can create a website or client that interacts with the Ethereum Classic blockchain.   
+The web3.js interface is also used to develop smart contracts in the Solidity language.  
+In this example, we'll set up a simple Javascript program to demonstrate the concept.
 # Running a sample application
-These are the steps to create and run a web3,js application that checks the synchronization status and displays the contents of the latest block.
+Follow these steps to create and run a web3.js application that checks the synchronization status and displays the contents of the latest block.
 ## Set up the file structure
-1. Make sure node.js, npm, and yarn are installed. There are plenty of instructional posts on the internet, so there is no need to repeat all that here.  
+1. Make sure [node.js](https://nodejs.org/en/download/), [npm](https://www.npmjs.com/get-npm), and [yarn](https://classic.yarnpkg.com/lang/en/) are installed. There are plenty of instructional posts on the internet, so there is no need to repeat all that here.  
 2.  Create a new directory (its name does not matter) and initialize it. Yarn creates two files, `yarn.lock` and `package.json`.   
 On Windows:  
  ```
@@ -42,8 +46,27 @@ On Linux:
     }
     user@computername:~/mantis-web3-example$ 
 ```
-## Install the web3 libraries
-The web3 libraries are available as an NPM package, so use NPM to install them in the directory you just created.  
+On macOS:   
+
+```
+    computerName:~user$ mkdir mantis-web3-example
+    computerName:~user$ cd mantis-web3-example
+    computerName:~user$ yarn init
+    yarn init v1.22.10
+    question name (Blockchain): mantis-web3-example
+    question version (1.0.0): 1.0.0
+    question description: Mantis web3 example
+    question entry point (index.js):
+    question repository url:
+    question author:
+    question license (MIT):
+    question private:
+    success Saved package.json
+    :sparkles:  Done in 56.13s.
+
+```
+## Install the web3.js libraries
+The web3.js libraries are available as an NPM package, so use NPM to install them in the directory you just created.  
 ```
 npm install web3
 ```
@@ -89,12 +112,13 @@ On all systems, create a file called `index.js` in the same directory as package
     20
 ```
 Index.js is the Javascript program.  
-Line 1 references the web3 libraries.    
+Line 1 references the web3.js libraries.    
 In line 3, we establish a connection between this program and the Mantis client.  
 In the block beginning at line 5, we query the client to discover the state of synchronization of the local client with the shared blockchain ledger.   
 In the block beginning at line 14, we retrieve the latest block that the client has downloaded so far.
 ## Test the program
-Start the Mantis client. In the example, we are using the Sagano testnet.
+Start the Mantis client.  
+In the example, we are using the Sagano testnet.
 For more information on starting the client, see the [Mantis configuration page](/how-tos/how-to-configure-mantis).
 ```
     mantis-launcher sagano
@@ -149,10 +173,10 @@ The result should be similar to this:
 
     C:\mantis-web3-example>
 ```
-The results above were obtained on Windows 10, 64-bit, version 20h2.
+We obtained the above results on Windows 10, 64-bit, version 20h2.
 ## Observe the results
 Notice that the web3 calls are asynchronous, so the results do not necessarily appear in the same order as you have written the method calls.  
 When we ran our test program, the client had started the synchronization process, but it had a long way to go. Your results will probably differ from these.  
 In the test execution, the last block call completes before the sync state call, even though the current block in the sync state result is lower than the block number returned by the latest block call.  
-## More information
-For more information about the web3 API, see the [Read The Docs page](https://web3js.readthedocs.io/en/v1.2.4/web3.html).
+# More information
+For more information about the web3.js API, see the [Read The Docs page](https://web3js.readthedocs.io/en/v1.2.4/web3.html).
