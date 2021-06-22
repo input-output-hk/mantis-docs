@@ -6,19 +6,21 @@ metaTitle: How to use the Web3.js interface with Mantis client
 
 
 # Introduction  
-Learn how to use the web3 Javascript interface with the Mantis client.  
+Learn how to use the web3 Javascript interface with the ETC Mantis client for application development.  
 Walk through an example program that demonstrates some sample API calls.  
   
-The Ethereum web3.js interface provides many documented API calls. You can create a website or client that interacts with the Ethereum Classic blockchain.   
+The Ethereum web3.js interface provides many documented API calls.  
+The interface gives you full access to the local copy of the Ethereum Classic blockchain. You can create a website or client that interacts with the decentralized blockchain ledger.   
 The web3.js interface is also used to develop smart contracts in the Solidity language.  
+  
 In this example, we'll set up a simple Javascript program to demonstrate the concept.  
 See the end of this page for more information.  
 # Running a sample application
 Follow these steps to create and run a web3.js application that checks the synchronization status and displays the contents of the latest block.
 ## Set up the file structure
-1. Make sure [node.js](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/lang/en/) are installed. There are plenty of instructional posts on the internet, so there is no need to repeat all that here.  
-2.  Create a new directory (its name does not matter) and initialize it. You can use npm or Yarn. Both npm and Yarn create the file `package.json`. Yarn also creates `yarn.lock`, and npm creates package-lock.json. From here on, we will demonstrate using Yarn.  
-On some systems you are prompted for information that will be added to package.json. This information will be updated later when the web3 libraries are installed.  You can just take the default values.    
+1. Make sure [node.js](https://nodejs.org/en/download/) and [Yarn](https://classic.yarnpkg.com/lang/en/) are installed. There are plenty of instructional posts on the internet, so there is no need to repeat all that here.  
+2.  Create a new directory (its name does not matter) and initialize it. You can use npm or Yarn. Both npm and Yarn create the file `package.json`. At the same time, Yarn also creates `yarn.lock`, and npm creates `package-lock.json`. From here on, we will demonstrate using Yarn.  
+On some systems, you are prompted for information that will be added to `package.json`. This information will be updated later when the web3 libraries are installed.  You can just take the default values.    
 On Windows:  
  ```
     c:\>mkdir mantis-web3-example
@@ -73,8 +75,25 @@ To install using Yarn:
 ```
 yarn add web3
 ```
+## Check the contents of package.json
+Compare your copy of `package.json` with this example. Make sure all the keys and values are there.
+
+```
+    {
+        "name": "mantis-web3-example",
+        "version": "1.0.0",
+        "main": "index.js",
+        "license": "MIT",
+        "dependencies": {
+            "web3": "^1.3.6"
+        },
+        "scripts": {
+            "start": "node index.js"
+        }
+    }
+```
 ## Write the Javascript
-On all systems, create a file called `index.js` in the same directory as package.json. Edit it so that it looks like this:  
+On all systems, create a file called `index.js` in the same directory as `package.json`. Edit it so that it looks like this:  
 ```
     1 const Web3 = require('web3')
     2 
@@ -97,7 +116,7 @@ On all systems, create a file called `index.js` in the same directory as package
     19   .catch((error) => console.error(error))
     20
 ```
-Index.js is the Javascript program.  
+`Index.js` is the Javascript program.  
 Line 1 references the web3.js libraries.    
 In line 3, we establish a connection between this program and the Mantis client.  
 In the block beginning at line 5, we query the client to discover the state of synchronization of the local client with the shared blockchain ledger.   
@@ -109,7 +128,7 @@ For more information on starting the client, see the [Mantis configuration page]
 ```
     mantis-launcher sagano
 ```
-Go to the directory you have created and run the sample program
+Go to the directory you have created and run the sample program.
 ```
     npm start
 ```
