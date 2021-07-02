@@ -40,6 +40,6 @@ There are several channels you can use in order to leave us this feedback:
 * [Wallet Issues](https://github.com/input-output-hk/mantis-wallet/issues)
 * [Docs Issues](https://github.com/input-output-hk/mantis-docs/issues)
 
-## Gastby Starter
+## Gatsby Starter
 
-For editing, formatting and new content, learn more about [Gastby Starter](https://www.gatsbyjs.com/docs/)
+For editing, formatting and new content, learn more about [Gatsby Starter](https://www.gatsbyjs.com/docs/)
