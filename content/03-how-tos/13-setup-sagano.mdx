@@ -41,7 +41,7 @@ Enter the sagano-service and run this command to bootstrap the VM with Mantis cl
 ```
 $ sudo apt update && sudo apt upgrade && sudo apt remove openjdk* && sudo apt install openjdk-8-jre unzip wget && mkdir /home/$USER/bin/ && wget https://github.com/input-output-hk/mantis/releases/download/v3.2.4/mantis-3.2.4.zip && mv mantis-3.2.4.zip /home/$USER/bin/ && cd /home/$USER/bin/ && unzip mantis* && mv mantis-3.2.4-SNAPSHOT mantis && sudo rm -r mantis-3.2.4.zip && export PATH=$PATH:~/bin/mantis/bin && source ~/.bashrc && cd ~/  
 ```   
-Check Mantis is installed  
+Check that Mantis is installed  
 ```
 $ which mantis-launcher
 /home/ubuntu/bin/mantis/bin/mantis-launcher
@@ -52,13 +52,13 @@ $ mantis-launcher sagano
 ```  
 Mantis will begin to download and sync the Sagano Testnet. Mantis enables JSON-RPC API service at port 8546 by default. Since the sagano-service is contained in its own VM at http://10.109.71.100, then http://10.109.71.100:8546 would be the Sagano API endpoint.
 
-In a new shell, use cURL to call JSON-RPC API methods to confirm the node is running.
-eth_chainId returns the chain ID of the network:
+In a new shell, use `cURL` to call JSON-RPC API methods to confirm the node is running.
+`eth_chainId` returns the chain ID of the network:
 
 ```
 $ curl --header "Content-Type:application/json" --request POST  --data '{"jsonrpc": "2.0", "method": "eth_chainId", "params":[], "id":1}' http://10.109.71.100:8546  
 ```
-Correct eth_chainId response:
+Correct `eth_chainId` response:
 ```
 {
     "jsonrpc": "2.0",
@@ -66,17 +66,17 @@ Correct eth_chainId response:
     "id": 1
 }
 ```
-Sagano Testnet’s chainId is 42 which is a hexidecimal value of 0x2a.
+Sagano Testnet’s `chainId` is 42 which is a hexidecimal value of `0x2a`.
 
-eth_syncing returns the starting, current, and highest block:  
+`eth_syncing` returns the starting, current, and highest block:  
 ```
 $ curl --header "Content-Type:application/json" --request POST  --data '{"jsonrpc": "2.0", "method": "eth_syncing", "params":[], "id":1}' http://10.109.71.100:8546  
 ```  
-At this point you have a contained Sagano API service and can utilize the local endpoint for your local dapp development enviorment.
+At this point you have a contained Sagano API service and can utilize the local endpoint for your local DApp development environment.
 
 Additional resources:
 
-Sagano Faucet: Get testnet ETC to your testnet account.  
-Sagano Explorer: Search and inspect blocks, transactions, addresses on Sagano testnet.  
-Mantis Docs: Mantis client and wallet documentation.  
+[Sagano Faucet](https://mantis-testnet-faucet-web.mantis.ws/): Get testnet ETC to your testnet account.  
+[Sagano Explorer](https://mantis-testnet-explorer.mantis.ws/): Search and inspect blocks, transactions, addresses on Sagano testnet.  
+[Mantis Docs](https://docs.mantisclient.io/): Mantis client and wallet documentation.  
 Select a repo  
