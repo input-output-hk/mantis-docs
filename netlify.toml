@@ -2,7 +2,7 @@
   publish = "public"
   command = "npm run build"
 [[redirects]]
-  from = "/"
-  to = "/first-steps/getting-started"
+  from = "*"
+  to = "https://iohk.io"
   force = true
   status = 200
