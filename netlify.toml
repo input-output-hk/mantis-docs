@@ -5,4 +5,4 @@
   from = "*"
   to = "https://iohk.io"
   force = true
-  status = 200
+  status = 301
