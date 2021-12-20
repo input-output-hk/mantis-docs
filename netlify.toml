@@ -3,6 +3,6 @@
   command = "npm run build"
 [[redirects]]
   from = "*"
-  to = "https://iohk.io"
+  to = "https://github.com/input-output-hk/mantis/releases/tag/v3.3.0"
   force = true
   status = 301
